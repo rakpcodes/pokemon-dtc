@@ -1,7 +1,6 @@
 /*
-- Make successful API call for pokemon list
-- Create function to select random pokemon index from list
-- Make 2nd call to pokemon endpoint using name as string param
+- Create function to select random pokemon based on ID
+- Make successful API call for for pokemon data
 - Gather the following data:
     - name
     - sprites.other.official-artwork.front_default
@@ -21,10 +20,12 @@
 
 */
 
-
-
 const app = {};
-const natDexRndm = Math.floor(Math.random() * 252);
+const natDexRndm = chance.natural({ min: 1, max: 251 });
+
+// const natDexRndm = Math.floor((Math.random() * 251) + 1)
+
+
 
 
 // First API Call to retrieve Random Pokemon
@@ -32,31 +33,30 @@ app.getPkmn = function () {
 
     $.ajax({
 
-        url: "https://pokeapi.co/api/v2/pokemon",
+        url: `https://pokeapi.co/api/v2/pokemon/${natDexRndm}`,
         data: {
             limit: "251",
         },
         dataType: "json",
 
         success: function (response) {
-            console.log(response.results[natDexRndm].name)
-            app.getPkmnInfo(response.results[natDexRndm].name)
-        }
-    });
-}
-
-// Second API Call to retrieve Pokmon Information
-app.getPkmnInfo = function (pkmnName) {
-
-    $.ajax({
-        url: `https://pokeapi.co/api/v2/pokemon/${pkmnName}`,
-        dataType: "json",
-
-        success: function (response) {
             console.log(response)
+            // app.addName(response)
         }
     });
 }
+
+
+
+
+
+// app.addName = (response) => {
+//     const pkmnName = response.name
+
+//     $(".pkmn-card-name").text(pkmnName)
+
+// }
+
 
 
 app.init = () => {
