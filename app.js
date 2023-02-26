@@ -33,10 +33,8 @@ app.getPkmn = function () {
 
     $.ajax({
 
-        url: `https://pokeapi.co/api/v2/pokemon/${natDexRndm}`,
-        data: {
-            limit: "251",
-        },
+        // url: `https://pokeapi.co/api/v2/pokemon/${natDexRndm}`,
+        url: `https://pokeapi.co/api/v2/pokemon/9`,
         dataType: "json",
 
         success: function (response) {
