@@ -21,6 +21,10 @@
         </div>
     </nav>
 
+
+    <!-- DONT FORGET TO CREATE THE MODALS FOR THE NAV! -->
+
+
     <header class="header">
         <h1 class="header-main">Pokémon DTC</h1>
         <p class="header-text">Welcome to Pokémon DTC! An app created using the PokéAPI that generates a unique Pokémon
@@ -32,17 +36,104 @@
     </header>
 
     <main>
-        <div class="pkmn-card pkmn-card-front">
-            <div class="pkmn-card-top">
-                <p class="pkmn-card-name">PKMN Name</p>
-                <div class="pokemon-type-1">
-                    <!-- <object data="./assets/pkmn-type-icons/dragon.svg" type="image/svg+xml" class="pokemon-type-icon"></object> -->
+        <section class="section-card-display">
+
+            <div class="pkmn-card pkmn-card-front">
+                <div class="pkmn-card-top">
+                    <p class="pkmn-card-name">PKMN Name</p>
+                    <div class="pokemon-type-1">
+                        <object data="./assets/pkmn-type-icons/dragon.svg" type="image/svg+xml"
+                            class="pokemon-type-icon"></object>
+                    </div>
+                    <div class="pokemon-type-2">
+                        <object data="./assets/pkmn-type-icons/dragon.svg" type="image/svg+xml"
+                            class="pokemon-type-icon"></object>
+                    </div>
+                    <div class="pkmn-image">
+                        <img src="" alt="A wild pokemon image appeared!" class="pkmn-image__img">
+                    </div>
                 </div>
-                <div class="pokemon-type-2">
-                    <!-- <object data="./assets/pkmn-type-icons/dragon.svg" type="image/svg+xml" class="pokemon-type-icon"></object> -->
+
+                <div class="stats">
+                    <div class="stats-box">
+                        <div class="stats-box-icon">
+                            <!-- svg -->
+                        </div>
+                        <p class="stats-box-value">###</p>
+                    </div>
+                    <div class="stats-box">
+                        <div class="stats-box-icon">
+                            <!-- svg -->
+                        </div>
+                        <p class="stats-box-value">###</p>
+                    </div>
+                    <div class="stats-box">
+                        <div class="stats-box-icon">
+                            <!-- svg -->
+                        </div>
+                        <p class="stats-box-value">###</p>
+                    </div>
+                    <div class="stats-box">
+                        <div class="stats-box-icon">
+                            <!-- svg -->
+                        </div>
+                        <p class="stats-box-value">###</p>
+                    </div>
                 </div>
+
+                <div class="pkmn-card-btm">
+
+                    <div class="move">
+                        <div class="move-primary-info">
+                            <p class="move-primary-info__heading">Move Name</p>
+                            <p class="move-primary-info__sub">Move Type</p>
+                            <p class="move-primary-info__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Aperiam maiores possimus nemo ratione molestiae officia. Repellendus veniam facere
+                                quaerat quam. Distinctio voluptas unde repudiandae commodi natus quisquam, laborum
+                                consectetur nihil?</p>
+                            <div class="move-primary-side">
+                                <div class="move-primary-side-class">
+                                    <p class="move-primary-side-class__heading">Class</p>
+                                    <object data="" type="" class="move-primary-side-class__icon"></object>
+                                </div>
+                                <div class="move-primary-side-power">
+                                    <p class="move-primary-side-power__heading">Power</p>
+                                    <p class="move-secondary-side-power__value">###</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="move">
+                        <div class="move-secondary-info">
+                            <p class="move-secondary-info__heading">Move Name</p>
+                            <p class="move-secondary-info__sub">Move Type</p>
+                            <p class="move-secondary-info__desc">Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit. Aperiam maiores possimus nemo ratione molestiae officia. Repellendus veniam facere
+                                quaerat quam. Distinctio voluptas unde repudiandae commodi natus quisquam, laborum
+                                consectetur nihil?</p>
+                            <div class="move-secondary-side">
+                                <div class="move-secondary-side-class">
+                                    <p class="move-secondary-side-class__heading">Class</p>
+                                    <object data="" type="" class="move-primary-side-class__icon"></object>
+                                </div>
+                                <div class="move-secondary-side-power">
+                                    <p class="move-secondary-side-power__heading">Power</p>
+                                    <p class="move-secondary-side-power__value">###</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- .pkmn-card-btm END -->
             </div>
-        </div>
+            <!-- .pkmn-card & .pkmn-card-front END -->
+
+            <button class="new-card"></button>
+
+        </section>
+
     </main>
 
 </body>
