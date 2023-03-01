@@ -1,7 +1,8 @@
 // ABSTRACTS
+@import "./abstracts/variables";
 @import "./abstracts/animations";
 @import "./abstracts/mixins";
-@import "./abstracts/variables";
+@import "./abstracts/utilities";
 
 //BASE
 @import "./base/base";
@@ -9,5 +10,7 @@
 @import "./base/typography";
 
 //COMPONENTS
+@import "./components/navbar";
+@import "./components/pkmn-card";
 
 //LAYOUT

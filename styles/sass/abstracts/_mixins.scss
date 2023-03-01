@@ -1,0 +1,5 @@
+@mixin black-box {
+    border: 0.7rem solid $color-text;
+    border-radius: 1.5rem;
+    background-color: white;
+}

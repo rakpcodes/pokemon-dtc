@@ -1,0 +1,45 @@
+.navbar {
+    font-family: $font-family-special;
+    font-size: $font-size-regular;
+    -webkit-text-stroke: 0.2rem $color-text-line-special;
+    -webkit-text-fill-color: $color-text-fill-special;
+    letter-spacing: 0.3rem;
+    text-align: center;
+
+    &-logo {
+        -webkit-text-stroke: 0.2rem $color-text-line-special;
+        -webkit-text-fill-color: $color-text-fill-special;
+        text-decoration: none;
+    }
+
+    &-list {
+        list-style: none;
+    }
+}
+
+.header {
+    text-align: center;
+    &-main {
+        font-size: $font-size-header;
+        font-family: $font-family-special;
+        -webkit-text-stroke: 0.2rem $color-text-line-special;
+        -webkit-text-fill-color: $color-text-fill-special;
+        letter-spacing: 0.6rem;
+    }
+}
+
+.section {
+    &-card-display {
+        text-align: center;
+
+        .pkmn-card {
+            &-name {
+                font-size: $font-size-card-header;
+            }
+
+            p {
+                font-size: $font-size-card-text;
+            }
+        }
+    }
+}
