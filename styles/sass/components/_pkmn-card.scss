@@ -1,3 +1,11 @@
+.section-card-display {
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 .pkmn-card {
     border: 1rem solid $color-card-border;
     border-radius: 1.5rem;
@@ -65,6 +73,7 @@
         height: 6rem;
         position: relative;
         top: -3rem;
+        margin-bottom: -6rem;
 
         &-box {
             @include black-box;
@@ -79,6 +88,55 @@
                 &__img {
                     width: 100%;
                     display: block;
+                }
+            }
+        }
+    }
+
+    &-btm {
+        background-color: $color-card-btm;
+        padding: 5rem 0 2rem 0;
+        .move {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 2rem;
+            // width: 90%;
+
+            &-info,
+            &-side-class,
+            &-side-power {
+                @include black-box;
+                padding: 1rem;
+            }
+
+            &-info {
+                width: 70%;
+                padding: 1rem 2rem;
+
+                &__type {
+                    margin-bottom: 2rem;
+                }
+            }
+
+            &-side {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                &-class {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-bottom: 2rem;
+                    &-icon {
+                        width: 4rem;
+
+                        &__img {
+                            fill: $color-text;
+                            width: 100%;
+                            display: block;
+                        }
+                    }
                 }
             }
         }

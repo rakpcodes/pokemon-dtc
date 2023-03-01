@@ -27,6 +27,10 @@
     background-color: $color-type-bug;
 }
 
+.bg-bug-gradient {
+    background: linear-gradient($color-type-bug, #fff);
+}
+
 .bg-dark {
     background-color: $color-type-dark;
 }

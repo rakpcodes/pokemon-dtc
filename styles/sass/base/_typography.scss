@@ -37,8 +37,34 @@
                 font-size: $font-size-card-header;
             }
 
-            p {
+            .stats-box-value {
                 font-size: $font-size-card-text;
+            }
+
+            .move {
+                &-info {
+                    text-align: center;
+
+                    &__name {
+                        font-size: $font-size-card-header;
+                    }
+
+                    &__type,
+                    &__desc {
+                        font-size: $font-size-card-text;
+                    }
+                }
+
+                &-side {
+                    &-class-heading,
+                    &-power-heading {
+                        font-size: $font-size-card-header;
+                    }
+
+                    &-power-value {
+                        font-size: $font-size-card-text;
+                    }
+                }
             }
         }
     }
