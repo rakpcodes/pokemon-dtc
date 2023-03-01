@@ -35,68 +35,153 @@
   background-color: #705746;
 }
 
+.bg-dark-gradient {
+  background: -webkit-gradient(linear, left top, left bottom, from(#705746), to(#fff));
+  background: linear-gradient(#705746, #fff);
+}
+
 .bg-dragon {
   background-color: #6f35fc;
+}
+
+.bg-dragon-gradient {
+  background: -webkit-gradient(linear, left top, left bottom, from(#6f35fc), to(#fff));
+  background: linear-gradient(#6f35fc, #fff);
 }
 
 .bg-electric {
   background-color: #f7d02c;
 }
 
+.bg-electric-gradient {
+  background: -webkit-gradient(linear, left top, left bottom, from(#f7d02c), to(#fff));
+  background: linear-gradient(#f7d02c, #fff);
+}
+
 .bg-fairy {
   background-color: #d685ad;
+}
+
+.bg-fairy-gradient {
+  background: -webkit-gradient(linear, left top, left bottom, from(#d685ad), to(#fff));
+  background: linear-gradient(#d685ad, #fff);
 }
 
 .bg-fighting {
   background-color: #c22e28;
 }
 
+.bg-fighting-gradient {
+  background: -webkit-gradient(linear, left top, left bottom, from(#c22e28), to(#fff));
+  background: linear-gradient(#c22e28, #fff);
+}
+
 .bg-fire {
   background-color: #ee8130;
+}
+
+.bg-fire-gradient {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ee8130), to(#fff));
+  background: linear-gradient(#ee8130, #fff);
 }
 
 .bg-flying {
   background-color: #a98ff3;
 }
 
+.bg-flying-gradient {
+  background: -webkit-gradient(linear, left top, left bottom, from(#a98ff3), to(#fff));
+  background: linear-gradient(#a98ff3, #fff);
+}
+
 .bg-ghost {
   background-color: #735797;
+}
+
+.bg-ghost-gradient {
+  background: -webkit-gradient(linear, left top, left bottom, from(#735797), to(#fff));
+  background: linear-gradient(#735797, #fff);
 }
 
 .bg-grass {
   background-color: #7ac74c;
 }
 
+.bg-grass-gradient {
+  background: -webkit-gradient(linear, left top, left bottom, from(#7ac74c), to(#fff));
+  background: linear-gradient(#7ac74c, #fff);
+}
+
 .bg-ground {
   background-color: #e2bf65;
+}
+
+.bg-ground-gradient {
+  background: -webkit-gradient(linear, left top, left bottom, from(#e2bf65), to(#fff));
+  background: linear-gradient(#e2bf65, #fff);
 }
 
 .bg-ice {
   background-color: #96d9d6;
 }
 
+.bg-ice-gradient {
+  background: -webkit-gradient(linear, left top, left bottom, from(#96d9d6), to(#fff));
+  background: linear-gradient(#96d9d6, #fff);
+}
+
 .bg-normal {
   background-color: #a8a77a;
+}
+
+.bg-normal-gradient {
+  background: -webkit-gradient(linear, left top, left bottom, from(#a8a77a), to(#fff));
+  background: linear-gradient(#a8a77a, #fff);
 }
 
 .bg-poison {
   background-color: #a33ea1;
 }
 
+.bg-poison-gradient {
+  background: -webkit-gradient(linear, left top, left bottom, from(#a33ea1), to(#fff));
+  background: linear-gradient(#a33ea1, #fff);
+}
+
 .bg-psychic {
   background-color: #f95587;
+}
+
+.bg-psychic-gradient {
+  background: -webkit-gradient(linear, left top, left bottom, from(#f95587), to(#fff));
+  background: linear-gradient(#f95587, #fff);
 }
 
 .bg-rock {
   background-color: #b6a136;
 }
 
+.bg-rock-gradient {
+  background: -webkit-gradient(linear, left top, left bottom, from(#b6a136), to(#fff));
+  background: linear-gradient(#b6a136, #fff);
+}
+
 .bg-steel {
   background-color: #b7b7ce;
 }
 
+.bg-steel-gradient {
+  background: -webkit-gradient(linear, left top, left bottom, from(#b7b7ce), to(#fff));
+  background: linear-gradient(#b7b7ce, #fff);
+}
+
 .bg-water {
   background-color: #6390f0;
+}
+
+.bg-water-gradient {
+  background: -webkit-gradient(linear, left top, left bottom, from(#6390f0), to(#fff));
+  background: linear-gradient(#6390f0, #fff);
 }
 
 html {
@@ -417,12 +502,15 @@ html {
   -webkit-text-fill-color: #ffcb05;
   letter-spacing: 0.6rem;
 }
+.header-text {
+  font-size: 2rem;
+}
 
 .section-card-display {
   text-align: center;
 }
 .section-card-display .pkmn-card-name {
-  font-size: 1.8rem;
+  font-size: 2.2rem;
 }
 .section-card-display .pkmn-card .stats-box-value {
   font-size: 1.4rem;
@@ -431,13 +519,13 @@ html {
   text-align: center;
 }
 .section-card-display .pkmn-card .move-info__name {
-  font-size: 1.8rem;
+  font-size: 2.2rem;
 }
 .section-card-display .pkmn-card .move-info__type, .section-card-display .pkmn-card .move-info__desc {
   font-size: 1.4rem;
 }
 .section-card-display .pkmn-card .move-side-class-heading, .section-card-display .pkmn-card .move-side-power-heading {
-  font-size: 1.8rem;
+  font-size: 2.2rem;
 }
 .section-card-display .pkmn-card .move-side-power-value {
   font-size: 1.4rem;
@@ -447,6 +535,8 @@ html {
   background-color: #ff1111;
   padding: 1rem 0 2rem 0;
   text-align: center;
+  position: sticky;
+  top: 0;
 }
 .navbar .wrapper {
   display: -webkit-box;
@@ -463,6 +553,9 @@ html {
   gap: 4rem;
 }
 
+.section-card-display {
+  margin-top: 10rem;
+}
 .section-card-display .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;

@@ -35,66 +35,134 @@
     background-color: $color-type-dark;
 }
 
+.bg-dark-gradient {
+    background: linear-gradient($color-type-dark, #fff);
+}
+
 .bg-dragon {
     background-color: $color-type-dragon;
+}
+
+.bg-dragon-gradient {
+    background: linear-gradient($color-type-dragon, #fff);
 }
 
 .bg-electric {
     background-color: $color-type-electric;
 }
 
+.bg-electric-gradient {
+    background: linear-gradient($color-type-electric, #fff);
+}
+
 .bg-fairy {
     background-color: $color-type-fairy;
+}
+
+.bg-fairy-gradient {
+    background: linear-gradient($color-type-fairy, #fff);
 }
 
 .bg-fighting {
     background-color: $color-type-fighting;
 }
 
+.bg-fighting-gradient {
+    background: linear-gradient($color-type-fighting, #fff);
+}
+
 .bg-fire {
     background-color: $color-type-fire;
+}
+
+.bg-fire-gradient {
+    background: linear-gradient($color-type-fire, #fff);
 }
 
 .bg-flying {
     background-color: $color-type-flying;
 }
 
+.bg-flying-gradient {
+    background: linear-gradient($color-type-flying, #fff);
+}
+
 .bg-ghost {
     background-color: $color-type-ghost;
+}
+
+.bg-ghost-gradient {
+    background: linear-gradient($color-type-ghost, #fff);
 }
 
 .bg-grass {
     background-color: $color-type-grass;
 }
 
+.bg-grass-gradient {
+    background: linear-gradient($color-type-grass, #fff);
+}
+
 .bg-ground {
     background-color: $color-type-ground;
+}
+
+.bg-ground-gradient {
+    background: linear-gradient($color-type-ground, #fff);
 }
 
 .bg-ice {
     background-color: $color-type-ice;
 }
 
+.bg-ice-gradient {
+    background: linear-gradient($color-type-ice, #fff);
+}
+
 .bg-normal {
     background-color: $color-type-normal;
+}
+
+.bg-normal-gradient {
+    background: linear-gradient($color-type-normal, #fff);
 }
 
 .bg-poison {
     background-color: $color-type-poison;
 }
 
+.bg-poison-gradient {
+    background: linear-gradient($color-type-poison, #fff);
+}
+
 .bg-psychic {
     background-color: $color-type-psychic;
+}
+
+.bg-psychic-gradient {
+    background: linear-gradient($color-type-psychic, #fff);
 }
 
 .bg-rock {
     background-color: $color-type-rock;
 }
 
+.bg-rock-gradient {
+    background: linear-gradient($color-type-rock, #fff);
+}
+
 .bg-steel {
     background-color: $color-type-steel;
 }
 
+.bg-steel-gradient {
+    background: linear-gradient($color-type-steel, #fff);
+}
+
 .bg-water {
     background-color: $color-type-water;
+}
+
+.bg-water-gradient {
+    background: linear-gradient($color-type-water, #fff);
 }

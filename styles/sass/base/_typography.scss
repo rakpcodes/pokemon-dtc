@@ -26,6 +26,10 @@
         -webkit-text-fill-color: $color-text-fill-special;
         letter-spacing: 0.6rem;
     }
+
+    &-text {
+        font-size: $font-size-header-text;
+    }
 }
 
 .section {
