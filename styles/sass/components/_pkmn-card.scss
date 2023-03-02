@@ -98,11 +98,15 @@
     &-btm {
         background-color: $color-card-btm;
         padding: 5rem 0 2rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         .move {
             display: flex;
             justify-content: space-around;
             margin-bottom: 2rem;
-            // width: 90%;
+            gap: 2rem;
+            width: 90%;
 
             &-info,
             &-side-class,
@@ -134,7 +138,6 @@
                         width: 4rem;
 
                         &__img {
-                            fill: $color-text;
                             width: 100%;
                             display: block;
                         }
