@@ -21,6 +21,10 @@
     margin-top: 8rem !important;
 }
 
+.hide {
+    display: none !important;
+}
+
 // Type BG Color
 
 .bg-bug {
@@ -165,4 +169,10 @@
 
 .bg-water-gradient {
     background: linear-gradient($color-type-water, #fff);
+}
+
+.bg-holo {
+    background: linear-gradient(135deg, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+
+    // background-color: $color-bg-holo;
 }

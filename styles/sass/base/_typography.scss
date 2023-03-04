@@ -39,6 +39,7 @@
         .pkmn-card {
             &-name {
                 font-size: $font-size-card-header;
+                text-transform: capitalize;
             }
 
             .stats-box-value {
@@ -51,9 +52,14 @@
 
                     &__name {
                         font-size: $font-size-card-header;
+                        text-transform: capitalize;
                     }
 
-                    &__type,
+                    &__type {
+                        font-size: $font-size-card-text;
+                        text-transform: capitalize;
+                    }
+
                     &__desc {
                         font-size: $font-size-card-text;
                     }

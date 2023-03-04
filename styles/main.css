@@ -1,3 +1,23 @@
+@-webkit-keyframes shimmer {
+  0% {
+    -webkit-transform: translateX(-200%);
+            transform: translateX(-200%);
+  }
+  20%, 100% {
+    -webkit-transform: translateX(200%);
+            transform: translateX(200%);
+  }
+}
+@keyframes shimmer {
+  0% {
+    -webkit-transform: translateX(-200%);
+            transform: translateX(-200%);
+  }
+  20%, 100% {
+    -webkit-transform: translateX(200%);
+            transform: translateX(200%);
+  }
+}
 .u-margin-bottom-small {
   margin-bottom: 2rem !important;
 }
@@ -20,6 +40,10 @@
 
 .u-margin-top-big {
   margin-top: 8rem !important;
+}
+
+.hide {
+  display: none !important;
 }
 
 .bg-bug {
@@ -182,6 +206,10 @@
 .bg-water-gradient {
   background: -webkit-gradient(linear, left top, left bottom, from(#6390f0), to(#fff));
   background: linear-gradient(#6390f0, #fff);
+}
+
+.bg-holo {
+  background: linear-gradient(135deg, rgb(238, 174, 202) 0%, rgb(148, 187, 233) 100%);
 }
 
 html {
@@ -511,6 +539,7 @@ html {
 }
 .section-card-display .pkmn-card-name {
   font-size: 2.2rem;
+  text-transform: capitalize;
 }
 .section-card-display .pkmn-card .stats-box-value {
   font-size: 1.4rem;
@@ -520,8 +549,13 @@ html {
 }
 .section-card-display .pkmn-card .move-info__name {
   font-size: 2.2rem;
+  text-transform: capitalize;
 }
-.section-card-display .pkmn-card .move-info__type, .section-card-display .pkmn-card .move-info__desc {
+.section-card-display .pkmn-card .move-info__type {
+  font-size: 1.4rem;
+  text-transform: capitalize;
+}
+.section-card-display .pkmn-card .move-info__desc {
   font-size: 1.4rem;
 }
 .section-card-display .pkmn-card .move-side-class-heading, .section-card-display .pkmn-card .move-side-power-heading {
@@ -537,6 +571,7 @@ html {
   text-align: center;
   position: sticky;
   top: 0;
+  z-index: 2;
 }
 .navbar .wrapper {
   display: -webkit-box;
@@ -587,12 +622,25 @@ html {
       -ms-flex-align: center;
           align-items: center;
   padding: 3rem 0;
+  position: relative;
+  z-index: 0;
+}
+.pkmn-card-top .shimmer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(100deg, rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0.6156862745) 50%, rgba(255, 255, 255, 0) 80%);
+  -webkit-animation: shimmer 5s infinite linear;
+          animation: shimmer 5s infinite linear;
 }
 .pkmn-card-icon-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 1.5rem;
+  z-index: 10;
 }
 .pkmn-card-name {
   border: 0.7rem solid #000;
@@ -602,6 +650,7 @@ html {
   width: -moz-max-content;
   width: max-content;
   padding: 1rem 3rem;
+  z-index: 10;
 }
 .pkmn-card-type {
   border: 0.7rem solid #000;
@@ -629,6 +678,7 @@ html {
 }
 .pkmn-card-image {
   width: 50%;
+  z-index: 10;
 }
 .pkmn-card-image__img {
   width: 100%;

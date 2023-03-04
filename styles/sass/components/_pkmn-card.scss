@@ -12,10 +12,6 @@
     border: 1rem solid $color-card-border;
     border-radius: 1.5rem;
     width: 50%;
-    // position: absolute;
-    // top: 50%;
-    // left: 50%;
-    // transform: translate(-50%, -50%);
 
     &-top {
         border-bottom: 1rem solid $color-card-border;
@@ -23,17 +19,38 @@
         flex-direction: column;
         align-items: center;
         padding: 3rem 0;
+        position: relative;
+        z-index: 0;
+
+        .shimmer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 100%;
+
+            background: linear-gradient(
+                100deg,
+                $color-holo-shimmer1 20%,
+                $color-holo-shimmer2 50%,
+                $color-holo-shimmer1 80%
+            );
+
+            animation: shimmer 5s infinite linear;
+        }
     }
 
     &-icon-box {
         display: flex;
         gap: 1.5rem;
+        z-index: 10;
     }
 
     &-name {
         @include black-box;
         width: max-content;
         padding: 1rem 3rem;
+        z-index: 10;
     }
 
     &-type {
@@ -61,6 +78,7 @@
 
     &-image {
         width: 50%;
+        z-index: 10;
 
         &__img {
             width: 100%;
