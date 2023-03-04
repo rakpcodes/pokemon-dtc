@@ -24,7 +24,7 @@ const app = {};
 
 // First API Call to retrieve Random Pokemon
 app.getPkmn = function () {
-    const natDexRndm = chance.natural({ min: 122, max: 132 });
+    const natDexRndm = chance.natural({ min: 1, max: 251 });
     $.ajax({
 
         url: `https://pokeapi.co/api/v2/pokemon/${natDexRndm}`,
