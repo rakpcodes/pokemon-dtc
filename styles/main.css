@@ -1,21 +1,29 @@
 @-webkit-keyframes shimmer {
   0% {
-    -webkit-transform: translateX(-200%);
-            transform: translateX(-200%);
+    -webkit-transform: translateX(-300%);
+            transform: translateX(-300%);
   }
-  20%, 100% {
-    -webkit-transform: translateX(200%);
-            transform: translateX(200%);
+  70% {
+    opacity: 1;
+  }
+  90%, 100% {
+    -webkit-transform: translateX(95%);
+            transform: translateX(95%);
+    opacity: 0;
   }
 }
 @keyframes shimmer {
   0% {
-    -webkit-transform: translateX(-200%);
-            transform: translateX(-200%);
+    -webkit-transform: translateX(-300%);
+            transform: translateX(-300%);
   }
-  20%, 100% {
-    -webkit-transform: translateX(200%);
-            transform: translateX(200%);
+  70% {
+    opacity: 1;
+  }
+  90%, 100% {
+    -webkit-transform: translateX(95%);
+            transform: translateX(95%);
+    opacity: 0;
   }
 }
 .u-margin-bottom-small {
@@ -209,7 +217,7 @@
 }
 
 .bg-holo {
-  background: linear-gradient(135deg, rgb(238, 174, 202) 0%, rgb(148, 187, 233) 100%);
+  background: linear-gradient(100deg, rgb(238, 174, 202) 0%, rgb(148, 187, 233) 100%);
 }
 
 html {
@@ -607,7 +615,7 @@ html {
 .pkmn-card {
   border: 1rem solid #3c5aa6;
   border-radius: 1.5rem;
-  width: 50%;
+  width: 60%;
 }
 .pkmn-card-top {
   border-bottom: 1rem solid #3c5aa6;
@@ -631,9 +639,10 @@ html {
   left: 0;
   width: 50%;
   height: 100%;
+  overflow-y: hidden;
   background: linear-gradient(100deg, rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0.6156862745) 50%, rgba(255, 255, 255, 0) 80%);
-  -webkit-animation: shimmer 5s infinite linear;
-          animation: shimmer 5s infinite linear;
+  -webkit-animation: shimmer 4s infinite linear;
+          animation: shimmer 4s infinite linear;
 }
 .pkmn-card-icon-box {
   display: -webkit-box;

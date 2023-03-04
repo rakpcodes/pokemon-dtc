@@ -11,7 +11,7 @@
 .pkmn-card {
     border: 1rem solid $color-card-border;
     border-radius: 1.5rem;
-    width: 50%;
+    width: 60%;
 
     &-top {
         border-bottom: 1rem solid $color-card-border;
@@ -28,6 +28,7 @@
             left: 0;
             width: 50%;
             height: 100%;
+            overflow-y: hidden;
 
             background: linear-gradient(
                 100deg,
@@ -36,7 +37,7 @@
                 $color-holo-shimmer1 80%
             );
 
-            animation: shimmer 5s infinite linear;
+            animation: shimmer 4s infinite linear;
         }
     }
 

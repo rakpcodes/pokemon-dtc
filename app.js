@@ -24,7 +24,7 @@ const app = {};
 
 // First API Call to retrieve Random Pokemon
 app.getPkmn = function () {
-    const natDexRndm = chance.natural({ min: 1, max: 251 });
+    const natDexRndm = chance.natural({ min: 122, max: 132 });
     $.ajax({
 
         url: `https://pokeapi.co/api/v2/pokemon/${natDexRndm}`,
@@ -90,7 +90,16 @@ app.addCardData = (response) => {
         cardBg.trigger("start.sparkle")
         cardBg.off("mouseover.sparkle")
         cardBg.off("mouseout.sparkle")
-        // cardBg.off("focus.sparkle")
+
+        let timer;
+        $(window).on("resize", function () {
+            clearTimeout(timer);
+            timer = setTimeout(function () {
+                cardBg.trigger("resize.sparkle");
+            }, 100);
+        });
+
+
     } else {
         $(".sparkle-canvas").remove()
         cardBg.addClass(`pkmn-card-top bg-${pkmnTypeMain}-gradient`);
@@ -115,6 +124,7 @@ app.addCardData = (response) => {
             count: 7,
             speed: 4,
             minSize: 15,
+            direction: "up",
         });
 
         pkmnSpriteCtnr.trigger("start.sparkle")
@@ -122,6 +132,14 @@ app.addCardData = (response) => {
         cardBg.trigger("stop.sparkle")
         cardBg.off("mouseover.sparkle")
         cardBg.off("mouseout.sparkle")
+
+        let timer;
+        $(window).on("resize", function () {
+            clearTimeout(timer);
+            timer = setTimeout(function () {
+                pkmnSpriteCtnr.trigger("resize.sparkle");
+            }, 200);
+        });
 
         if (holoCheck <= 47 && holoCheck >= 24) {
             cardBg.trigger("start.sparkle")
@@ -148,10 +166,6 @@ app.addCardData = (response) => {
             cardBg.off("mouseover.sparkle")
         }
     }
-
-
-
-    // Final check for both holo and shiny sprite
 
     // Update Stats
     const statsHP = Math.round((response.stats[0].base_stat / 10) * 1.5) * 10
@@ -207,6 +221,7 @@ app.addCardData = (response) => {
                 $(".move-info__name-secondary").text("---")
                 $(".move-info__type-secondary").text("Type: ---")
                 $(".move-info__desc-secondary").text("---")
+                $(".move-side-class-icon__img-secondary").attr("src", "./assets/pkmn-vitals-icons/question.png")
                 $(".move-side-power-value-secondary").text("---")
 
             }
