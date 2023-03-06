@@ -1,5 +1,14 @@
 @mixin black-box {
-    border: 0.7rem solid $color-text;
-    border-radius: 1.5rem;
-    background-color: white;
+    @include pixel-box(
+        $corner-size: 1,
+        $border-size: 1rem,
+        $background-color: #fff,
+        $border-color: $color-text,
+        $border-inset: false,
+        $border-inset-size: false,
+        $border-inset-color: false,
+        $border-inset-sides: false,
+        $border-inset-color-br: false,
+        $border-inset-color-tl: false
+    );
 }

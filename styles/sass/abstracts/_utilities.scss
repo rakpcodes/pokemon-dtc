@@ -171,6 +171,10 @@
     background: linear-gradient($color-type-water, #fff);
 }
 
+.bg-default {
+    background: linear-gradient($color-text, #fff);
+}
+
 .bg-holo {
     background: linear-gradient(100deg, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
 }

@@ -9,8 +9,9 @@
 }
 
 .pkmn-card {
-    border: 1rem solid $color-card-border;
-    border-radius: 1.5rem;
+    // border: 1rem solid $color-card-border;
+    // border-radius: 1.5rem;
+    @include pixel-borders($corner-size: 2, $border-size: 1rem, $border-color: $color-card-border);
     width: 60%;
 
     &-top {
@@ -20,7 +21,7 @@
         align-items: center;
         padding: 3rem 0;
         position: relative;
-        z-index: 0;
+        z-index: -1;
 
         .shimmer {
             position: absolute;
@@ -49,6 +50,7 @@
 
     &-name {
         @include black-box;
+        // @include pixel-box($corner-size: 2, $background-color: #fff);
         width: max-content;
         padding: 1rem 3rem;
         z-index: 10;
@@ -57,12 +59,11 @@
     &-type {
         @include black-box;
         padding: 3rem;
-        width: 3rem;
-        height: 3rem;
         position: relative;
 
         &-ctnr {
             width: 5rem;
+            position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
@@ -101,7 +102,7 @@
             display: flex;
             align-items: center;
             gap: 1rem;
-            padding: 1rem;
+            padding: 2rem;
 
             &-icon {
                 width: 3rem;
@@ -120,6 +121,9 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        position: relative;
+        z-index: -1;
+
         .move {
             display: flex;
             justify-content: space-around;
