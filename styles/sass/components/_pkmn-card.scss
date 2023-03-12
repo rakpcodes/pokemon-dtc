@@ -9,13 +9,18 @@
 }
 
 .pkmn-card {
-    // border: 1rem solid $color-card-border;
-    // border-radius: 1.5rem;
-    @include pixel-borders($corner-size: 2, $border-size: 1rem, $border-color: $color-card-border);
-    width: 60%;
+    // @include pixel-borders($corner-size: 2, $border-size: 1rem, $border-color: $color-card-border);
+    border: 1rem solid $color-card-border;
+    // background-color: #fff;
+    border-radius: 5px;
+
+    // width: 60%;
+    display: flex;
+    position: relative;
 
     &-top {
-        border-bottom: 1rem solid $color-card-border;
+        border-right: 1rem solid $color-card-border;
+        width: 40%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -44,6 +49,7 @@
 
     &-icon-box {
         display: flex;
+        justify-content: center;
         gap: 1.5rem;
         z-index: 10;
     }
@@ -52,12 +58,15 @@
         @include black-box;
         // @include pixel-box($corner-size: 2, $background-color: #fff);
         width: max-content;
-        padding: 1rem 3rem;
+        // width: 80%;
+        padding: 1rem 2rem;
+        // margin: 0 5rem;
         z-index: 10;
     }
 
     &-type {
         @include black-box;
+        border-radius: 50%;
         padding: 3rem;
         position: relative;
 
@@ -79,7 +88,8 @@
     }
 
     &-image {
-        width: 50%;
+        // width: 50%;
+        width: 60%;
         z-index: 10;
 
         &__img {
@@ -90,19 +100,22 @@
 
     .stats {
         display: flex;
-        justify-content: center;
+        flex-direction: column;
         gap: 1.5rem;
-        height: 6rem;
-        position: relative;
-        top: -3rem;
-        margin-bottom: -6rem;
+        position: absolute;
+        top: 50%;
+        left: 40%;
+        transform: translate(-60%, -50%);
+        // height: 6rem;
+        // left: -3rem;
+        // margin-right: -6rem;
 
         &-box {
             @include black-box;
             display: flex;
             align-items: center;
             gap: 1rem;
-            padding: 2rem;
+            padding: 1rem;
 
             &-icon {
                 width: 3rem;
@@ -117,19 +130,26 @@
 
     &-btm {
         background-color: $color-card-btm;
-        padding: 5rem 0 2rem 0;
+        // padding: 5rem 0 2rem 0;
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         position: relative;
+        padding-left: 3rem;
         z-index: -1;
+        width: 60%;
 
         .move {
             display: flex;
+            // flex-direction: column;
             justify-content: space-around;
-            margin-bottom: 2rem;
             gap: 2rem;
             width: 90%;
+
+            &:first-child {
+                margin-bottom: 2rem;
+            }
 
             &-info,
             &-side-class,
@@ -139,8 +159,8 @@
             }
 
             &-info {
-                width: 70%;
-                padding: 1rem 2rem;
+                width: 100%;
+                // padding: 1rem 2rem;
 
                 &__type {
                     margin-bottom: 2rem;
@@ -151,19 +171,26 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
+                gap: 1rem;
 
                 &-class {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    margin-bottom: 2rem;
+                    // margin-bottom: 2rem;
                     &-icon {
-                        width: 4rem;
+                        width: 3rem;
 
                         &__img {
                             width: 100%;
                             display: block;
                         }
+                    }
+                }
+
+                &-power {
+                    &-value {
+                        padding-top: 1rem;
                     }
                 }
             }

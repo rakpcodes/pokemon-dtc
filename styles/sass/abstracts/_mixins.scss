@@ -1,14 +1,20 @@
+// @mixin black-box {
+//     @include pixel-box(
+//         $corner-size: 1,
+//         $border-size: 1rem,
+//         $background-color: #fff,
+//         $border-color: $color-card-info-border,
+//         $border-inset: false,
+//         $border-inset-size: false,
+//         $border-inset-color: false,
+//         $border-inset-sides: false,
+//         $border-inset-color-br: false,
+//         $border-inset-color-tl: false
+//     );
+// }
+
 @mixin black-box {
-    @include pixel-box(
-        $corner-size: 1,
-        $border-size: 1rem,
-        $background-color: #fff,
-        $border-color: $color-text,
-        $border-inset: false,
-        $border-inset-size: false,
-        $border-inset-color: false,
-        $border-inset-sides: false,
-        $border-inset-color-br: false,
-        $border-inset-color-tl: false
-    );
+    border: 0.5rem solid $color-card-info-border;
+    background-color: #fff;
+    border-radius: 5px;
 }
