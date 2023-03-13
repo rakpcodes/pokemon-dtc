@@ -17,10 +17,24 @@
     }
 }
 
+.modal {
+    &-about {
+        text-align: center;
+
+        &-header {
+            font-size: $font-size-modal-heading;
+        }
+
+        &-text-box {
+            font-size: $font-size-modal-text;
+        }
+    }
+}
+
 .header {
     text-align: center;
     &-main {
-        font-size: $font-size-header;
+        font-size: $font-size-heading;
         font-family: $font-family-special;
         -webkit-text-stroke: 0.2rem $color-text-line-special;
         -webkit-text-fill-color: $color-text-fill-special;
@@ -38,7 +52,7 @@
 
         .pkmn-card {
             &-name {
-                font-size: $font-size-card-header;
+                font-size: $font-size-card-heading;
                 text-transform: capitalize;
                 text-align: center;
             }
@@ -52,7 +66,7 @@
                     text-align: center;
 
                     &__name {
-                        font-size: $font-size-card-header;
+                        font-size: $font-size-card-heading;
                         text-transform: capitalize;
                     }
 
@@ -69,7 +83,7 @@
                 &-side {
                     &-class-heading,
                     &-power-heading {
-                        font-size: $font-size-card-header;
+                        font-size: $font-size-card-heading;
                     }
 
                     &-power-value {

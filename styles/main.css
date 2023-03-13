@@ -940,6 +940,16 @@ html {
   list-style: none;
 }
 
+.modal-about {
+  text-align: center;
+}
+.modal-about-header {
+  font-size: 3rem;
+}
+.modal-about-text-box {
+  font-size: 1.4rem;
+}
+
 .header {
   text-align: center;
 }
