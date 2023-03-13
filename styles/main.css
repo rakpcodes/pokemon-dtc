@@ -1034,7 +1034,6 @@ html {
   position: relative;
 }
 .pkmn-card-top {
-  border-right: 1rem solid #3c5aa6;
   width: 40%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1125,9 +1124,9 @@ html {
   gap: 1.5rem;
   position: absolute;
   top: 50%;
-  left: 40%;
-  -webkit-transform: translate(-60%, -50%);
-          transform: translate(-60%, -50%);
+  left: 41%;
+  -webkit-transform: translate(-61%, -50%);
+          transform: translate(-61%, -50%);
 }
 .pkmn-card .stats-box {
   border: 0.5rem solid #000;
@@ -1151,6 +1150,7 @@ html {
 }
 .pkmn-card-btm {
   background-color: #c7a008;
+  border-left: 1rem solid #3c5aa6;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

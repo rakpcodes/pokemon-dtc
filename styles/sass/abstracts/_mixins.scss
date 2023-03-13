@@ -18,3 +18,16 @@
     background-color: #fff;
     border-radius: 5px;
 }
+
+@mixin shimmer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    overflow-y: hidden;
+
+    background: linear-gradient(100deg, $color-holo-shimmer1 20%, $color-holo-shimmer2 50%, $color-holo-shimmer1 80%);
+
+    animation: shimmer 4s infinite linear;
+}

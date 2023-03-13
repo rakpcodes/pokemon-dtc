@@ -19,7 +19,7 @@
     position: relative;
 
     &-top {
-        border-right: 1rem solid $color-card-border;
+        // border-right: 1rem solid $color-card-border;
         width: 40%;
         display: flex;
         flex-direction: column;
@@ -29,21 +29,7 @@
         z-index: -1;
 
         .shimmer {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 50%;
-            height: 100%;
-            overflow-y: hidden;
-
-            background: linear-gradient(
-                100deg,
-                $color-holo-shimmer1 20%,
-                $color-holo-shimmer2 50%,
-                $color-holo-shimmer1 80%
-            );
-
-            animation: shimmer 4s infinite linear;
+            @include shimmer;
         }
     }
 
@@ -105,8 +91,8 @@
         gap: 1.5rem;
         position: absolute;
         top: 50%;
-        left: 40%;
-        transform: translate(-60%, -50%);
+        left: 41%;
+        transform: translate(-61%, -50%);
         // height: 6rem;
         // left: -3rem;
         // margin-right: -6rem;
@@ -131,6 +117,7 @@
 
     &-btm {
         background-color: $color-card-btm;
+        border-left: 1rem solid $color-card-border;
         // padding: 5rem 0 2rem 0;
         display: flex;
         flex-direction: column;
