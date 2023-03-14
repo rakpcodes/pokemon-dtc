@@ -920,23 +920,6 @@ html {
   overflow: hidden;
 }
 
-.navbar {
-  font-family: "Pokemon Solid", cursive;
-  font-size: 3rem;
-  -webkit-text-stroke: 0.2rem #2a75bb;
-  -webkit-text-fill-color: #ffcb05;
-  letter-spacing: 0.3rem;
-  text-align: center;
-}
-.navbar-logo {
-  -webkit-text-stroke: 0.2rem #2a75bb;
-  -webkit-text-fill-color: #ffcb05;
-  text-decoration: none;
-}
-.navbar-list {
-  list-style: none;
-}
-
 .btn-menu, .btn-back {
   font-family: "Press Start 2P", cursive;
   font-size: 2rem;
@@ -949,6 +932,7 @@ html {
 }
 .modal-nav-head {
   text-transform: uppercase;
+  font-size: 3rem;
 }
 .modal-nav-list {
   list-style: none;
@@ -1055,9 +1039,6 @@ html {
   content: "▶";
   display: inline-block;
   margin-right: 1rem;
-}
-.modal-about {
-  padding-top: 5rem;
 }
 .modal-about-header {
   border: 0.5rem solid #000;
