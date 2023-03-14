@@ -99,6 +99,26 @@ btnBackAbout.click(function () {
 })
 
 
+const pkmnTypes = ["normal", "fire", "fighting", "water", "flying", "grass", "poison", "electric", "ground", "psychic", "rock", "ice", "bug", "dragon", "ghost", "dark", "steel", "fairy"]
+
+const symbolCtnr = $(".modal-legend-text-box-symbols-type")
+
+pkmnTypes.forEach(type => {
+
+    symbolCtnr.append(`
+    <div class="modal-legend-text-box-symbols-type">
+    <div class="modal-legend-text-box-symbols-type-icon">
+        <img src="./assets/pkmn-type-icons/${type}.svg" alt="A ${type}-type icon."
+            class="modal-legend-text-box-symbols-type-icon__img bg-${type}">
+    </div>
+    <p class="modal-legend-text-box-symbols-type-text">${type}</p>
+</div>
+    `);
+
+})
+
+
+
 const app = {};
 
 // First API Call to retrieve Random Pokemon
