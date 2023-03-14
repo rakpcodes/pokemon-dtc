@@ -1,0 +1,50 @@
+.modal {
+    position: fixed;
+    width: 100.1%;
+    height: 100vh;
+    background-color: $color-bg-modal;
+    z-index: 100;
+    display: none;
+
+    &-about {
+        padding-top: 5rem;
+        &-header {
+            @include black-box;
+            position: relative;
+            display: inline-block;
+            padding: 1.5rem 2rem;
+            margin-bottom: 3rem;
+        }
+
+        &-text-box {
+            @include black-box;
+            height: 70vh;
+            overflow-y: scroll;
+            padding: 3rem;
+
+            &-image {
+                display: inline-block;
+                width: 20rem;
+                border: 3px solid $color-card-border;
+                margin: 3rem 0;
+                position: relative;
+
+                &:nth-child(2) {
+                    z-index: 100;
+                }
+
+                &__img {
+                    display: block;
+                    width: 100%;
+                    object-fit: cover;
+                    position: relative;
+                    z-index: 300;
+                }
+
+                .shimmer {
+                    @include shimmer;
+                }
+            }
+        }
+    }
+}

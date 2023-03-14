@@ -20,6 +20,39 @@
 
 */
 
+// Sparkle Effect for example images
+
+const exampleBg = $(".ex-bg")
+
+exampleBg.sparkle({
+    color: "rainbow",
+    count: 20,
+    speed: 3,
+    minSize: 4,
+    overlap: -3,
+});
+
+exampleBg.trigger("start.sparkle")
+exampleBg.off("mouseover.sparkle")
+exampleBg.off("mouseout.sparkle")
+
+const exampleImg = $(".ex-img")
+
+exampleImg.sparkle({
+    color: "#FFFFFF",
+    count: 5,
+    speed: 2,
+    minSize: 5,
+    direction: "up",
+});
+
+exampleImg.trigger("start.sparkle")
+exampleImg.off("mouseover.sparkle")
+exampleImg.off("mouseout.sparkle")
+
+// .hasClass() for when it's time to target modals
+
+
 const app = {};
 
 // First API Call to retrieve Random Pokemon
@@ -120,7 +153,7 @@ app.addCardData = (response) => {
 
         pkmnSpriteCtnr.sparkle({
             color: "#FFFFFF",
-            count: 7,
+            count: 8,
             speed: 4,
             minSize: 15,
             direction: "up",

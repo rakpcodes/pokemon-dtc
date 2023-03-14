@@ -1,7 +1,7 @@
 @-webkit-keyframes shimmer {
   0% {
-    -webkit-transform: translateX(-300%);
-            transform: translateX(-300%);
+    -webkit-transform: translateX(-200%);
+            transform: translateX(-200%);
   }
   70% {
     opacity: 1;
@@ -14,8 +14,8 @@
 }
 @keyframes shimmer {
   0% {
-    -webkit-transform: translateX(-300%);
-            transform: translateX(-300%);
+    -webkit-transform: translateX(-200%);
+            transform: translateX(-200%);
   }
   70% {
     opacity: 1;
@@ -994,6 +994,64 @@ html {
 }
 .section-card-display .pkmn-card .move-side-power-value {
   font-size: 1.2rem;
+}
+
+.modal {
+  position: fixed;
+  width: 100.1%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7529411765);
+  z-index: 100;
+  display: none;
+}
+.modal-about {
+  padding-top: 5rem;
+}
+.modal-about-header {
+  border: 0.5rem solid #000;
+  background-color: #fff;
+  border-radius: 5px;
+  position: relative;
+  display: inline-block;
+  padding: 1.5rem 2rem;
+  margin-bottom: 3rem;
+}
+.modal-about-text-box {
+  border: 0.5rem solid #000;
+  background-color: #fff;
+  border-radius: 5px;
+  height: 70vh;
+  overflow-y: scroll;
+  padding: 3rem;
+}
+.modal-about-text-box-image {
+  display: inline-block;
+  width: 20rem;
+  border: 3px solid #3c5aa6;
+  margin: 3rem 0;
+  position: relative;
+}
+.modal-about-text-box-image:nth-child(2) {
+  z-index: 100;
+}
+.modal-about-text-box-image__img {
+  display: block;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+  z-index: 300;
+}
+.modal-about-text-box-image .shimmer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  overflow-y: hidden;
+  background: linear-gradient(100deg, rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0.6156862745) 50%, rgba(255, 255, 255, 0) 80%);
+  -webkit-animation: shimmer 4s infinite linear;
+          animation: shimmer 4s infinite linear;
 }
 
 .navbar {
