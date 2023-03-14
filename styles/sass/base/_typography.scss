@@ -49,12 +49,26 @@
     &-about {
         text-align: center;
 
-        &-header {
+        &-head {
             font-size: $font-size-modal-heading;
         }
 
         &-text-box {
             font-size: $font-size-modal-text;
+        }
+    }
+
+    &-legend {
+        text-align: center;
+
+        &-head {
+            font-size: $font-size-modal-heading;
+        }
+
+        &-text-box {
+            &-sub-head {
+                font-size: $font-size-modal-heading;
+            }
         }
     }
 }

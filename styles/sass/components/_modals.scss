@@ -48,7 +48,7 @@
     }
 
     &-about {
-        &-header {
+        &-head {
             @include black-box;
             position: relative;
             display: inline-block;
@@ -84,6 +84,49 @@
 
                 .shimmer {
                     @include shimmer;
+                }
+            }
+        }
+    }
+
+    &-legend {
+        &-head {
+            @include black-box;
+            position: relative;
+            display: inline-block;
+            margin-bottom: 4rem;
+        }
+
+        &-text-box {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+
+            &-sub-head {
+                @include black-box;
+            }
+
+            &-symbols {
+                @include black-box;
+
+                &-type {
+                    &-icon {
+                        width: 7rem;
+                        @include black-box;
+                        border-radius: 50%;
+                        padding: 0.5rem;
+                        margin: 0;
+                        display: inline-block;
+
+                        &__img {
+                            width: 100%;
+                            border-radius: 50%;
+                            object-fit: cover;
+                            display: block;
+                            padding: 0.7rem;
+                            z-index: 10;
+                        }
+                    }
                 }
             }
         }
