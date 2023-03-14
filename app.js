@@ -20,6 +20,16 @@
 
 */
 
+
+const menuButton = $(".btn-menu")
+const navModal = $(".nav")
+
+
+menuButton.click(function () {
+    navModal.addClass("show")
+})
+
+
 // Sparkle Effect for example images
 
 const exampleBg = $(".ex-bg")
@@ -49,6 +59,8 @@ exampleImg.sparkle({
 exampleImg.trigger("start.sparkle")
 exampleImg.off("mouseover.sparkle")
 exampleImg.off("mouseout.sparkle")
+
+
 
 // .hasClass() for when it's time to target modals
 

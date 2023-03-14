@@ -1,10 +1,51 @@
 .modal {
     position: fixed;
+    top: 0;
     width: 100.1%;
     height: 100vh;
     background-color: $color-bg-modal;
     z-index: 100;
     display: none;
+
+    &-nav {
+        &-text-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 35%;
+        }
+
+        &-head {
+            @include black-box;
+            padding: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        &-list {
+            @include black-box;
+            padding: 5rem 0;
+
+            &-item {
+                display: block;
+                &:not(:last-child) {
+                    margin-bottom: 5rem;
+                }
+
+                &:hover,
+                &:focus {
+                    cursor: pointer;
+
+                    &::before {
+                        content: "\25b6";
+                        display: inline-block;
+                        margin-right: 1rem;
+                        // overflow: hidden;
+                    }
+                }
+            }
+        }
+    }
 
     &-about {
         padding-top: 5rem;
@@ -47,4 +88,8 @@
             }
         }
     }
+}
+
+.show {
+    display: block;
 }

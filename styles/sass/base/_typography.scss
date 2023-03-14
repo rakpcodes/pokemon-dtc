@@ -17,7 +17,34 @@
     }
 }
 
+.btn {
+    &-menu,
+    &-back {
+        font-family: $font-family-main;
+        font-size: $font-size-header-text;
+        text-transform: uppercase;
+    }
+}
+
 .modal {
+    &-nav {
+        text-align: center;
+        font-size: $font-size-modal-heading;
+
+        &-head {
+            text-transform: uppercase;
+        }
+
+        &-list {
+            list-style: none;
+            font-size: 0;
+
+            &-item {
+                font-size: $font-size-modal-heading;
+            }
+        }
+    }
+
     &-about {
         text-align: center;
 
