@@ -5,7 +5,7 @@
     height: 100vh;
     background-color: $color-bg-modal;
     z-index: 100;
-    display: none;
+    // display: none;
 
     &-nav {
         &-text-box {
@@ -48,11 +48,17 @@
     }
 
     &-about {
+        // .wrapper {
+        //     // display: flex;
+        //     // flex-direction: column;
+        //     // align-items: center;
+        // }
         padding-top: 5rem;
         &-header {
             @include black-box;
             position: relative;
             display: inline-block;
+            // width: max-content;
             padding: 1.5rem 2rem;
             margin-bottom: 3rem;
         }
@@ -79,7 +85,7 @@
                     width: 100%;
                     object-fit: cover;
                     position: relative;
-                    z-index: 300;
+                    z-index: 150;
                 }
 
                 .shimmer {
@@ -90,6 +96,6 @@
     }
 }
 
-.show {
-    display: block;
+.hide {
+    display: none;
 }

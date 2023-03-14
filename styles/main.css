@@ -51,14 +51,6 @@
   margin-top: 8rem !important;
 }
 
-.show {
-  display: block;
-}
-
-.hide {
-  display: none;
-}
-
 .bg-bug {
   background-color: #a6b91a;
 }
@@ -1028,7 +1020,6 @@ html {
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.7529411765);
   z-index: 100;
-  display: none;
 }
 .modal-nav-text-box {
   position: absolute;
@@ -1101,7 +1092,7 @@ html {
   -o-object-fit: cover;
      object-fit: cover;
   position: relative;
-  z-index: 300;
+  z-index: 150;
 }
 .modal-about-text-box-image .shimmer {
   position: absolute;
@@ -1115,8 +1106,8 @@ html {
           animation: shimmer 4s infinite linear;
 }
 
-.show {
-  display: block;
+.hide {
+  display: none;
 }
 
 .navbar {
@@ -1413,6 +1404,6 @@ html {
   display: block;
 }
 
-.hide {
-  display: none;
+.disappear {
+  opacity: 0;
 }

@@ -23,42 +23,77 @@
 
 const menuButton = $(".btn-menu")
 const navModal = $(".nav")
+const aboutModal = $(".about")
+const aboutLink = $(".nav-about")
+const btnBackNav = $(".btn-back-nav")
+const btnBackAbout = $(".btn-back-about")
+
 
 
 menuButton.click(function () {
-    navModal.addClass("show")
+    navModal.removeClass("hide")
+    menuButton.addClass("disappear");
 })
 
+btnBackNav.click(function () {
+    navModal.addClass("hide")
+    menuButton.removeClass("disappear")
 
-// Sparkle Effect for example images
+})
 
-const exampleBg = $(".ex-bg")
+aboutLink.click(function () {
+    navModal.addClass("hide");
+    aboutModal.removeClass("hide")
 
-exampleBg.sparkle({
-    color: "rainbow",
-    count: 20,
-    speed: 3,
-    minSize: 4,
-    overlap: -3,
-});
+    // Sparkle Effect for example images
 
-exampleBg.trigger("start.sparkle")
-exampleBg.off("mouseover.sparkle")
-exampleBg.off("mouseout.sparkle")
+    const exampleBg = $(".ex-bg")
 
-const exampleImg = $(".ex-img")
+    exampleBg.sparkle({
+        color: "rainbow",
+        count: 20,
+        speed: 3,
+        minSize: 4,
+        overlap: -3,
+    });
 
-exampleImg.sparkle({
-    color: "#FFFFFF",
-    count: 5,
-    speed: 2,
-    minSize: 5,
-    direction: "up",
-});
+    exampleBg.trigger("start.sparkle")
+    exampleBg.off("mouseover.sparkle")
+    exampleBg.off("mouseout.sparkle")
 
-exampleImg.trigger("start.sparkle")
-exampleImg.off("mouseover.sparkle")
-exampleImg.off("mouseout.sparkle")
+    const exampleImg = $(".ex-img")
+
+    exampleImg.sparkle({
+        color: "#FFFFFF",
+        count: 5,
+        speed: 2,
+        minSize: 5,
+        direction: "up",
+    });
+
+    exampleImg.trigger("start.sparkle")
+    exampleImg.off("mouseover.sparkle")
+    exampleImg.off("mouseout.sparkle")
+
+    let timer;
+    $(window).on("resize", function () {
+        clearTimeout(timer);
+        timer = setTimeout(function () {
+            exampleBg.trigger("resize.sparkle");
+            exampleImg.trigger("resize.sparkle");
+        }, 100);
+    });
+
+})
+
+btnBackAbout.click(function () {
+    aboutModal.addClass("hide");
+    navModal.removeClass("hide")
+
+    $(".ex-bg > .sparkle-canvas").remove()
+
+})
+
 
 
 
