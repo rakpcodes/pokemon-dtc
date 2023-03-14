@@ -1378,6 +1378,9 @@ html {
   -webkit-box-shadow: 0 0.3rem 0.3rem #000;
           box-shadow: 0 0.3rem 0.3rem #000;
 }
+.btn-back {
+  left: 86%;
+}
 .btn-new-card {
   all: unset;
   width: 10rem;

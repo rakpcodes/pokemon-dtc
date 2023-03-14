@@ -20,7 +20,7 @@
 
 */
 
-
+const body = $("body")
 const menuButton = $(".btn-menu")
 const navModal = $(".nav")
 const aboutModal = $(".about")
@@ -31,13 +31,17 @@ const btnBackAbout = $(".btn-back-about")
 
 
 menuButton.click(function () {
-    navModal.removeClass("hide")
     menuButton.addClass("disappear");
+    navModal.removeClass("hide")
+    body[0].style.overflow = "hidden"
+    body[0].style.paddingRight = "1.5rem"
 })
 
 btnBackNav.click(function () {
     navModal.addClass("hide")
     menuButton.removeClass("disappear")
+    body[0].style.overflow = ""
+    body[0].style.paddingRight = ""
 
 })
 
@@ -95,11 +99,6 @@ btnBackAbout.click(function () {
 })
 
 
-
-
-// .hasClass() for when it's time to target modals
-
-
 const app = {};
 
 // First API Call to retrieve Random Pokemon
@@ -155,7 +154,7 @@ app.addCardData = (response) => {
     const holoCheck = chance.natural({ min: 1, max: 100 })
     console.log("Holo Check:", holoCheck)
 
-    if (holoCheck <= 47 && holoCheck >= 24) {
+    if (holoCheck <= 24 && holoCheck >= 1) {
         $(".sparkle-canvas").remove()
         cardBg.addClass(`pkmn-card-top bg-holo`)
         $(".holo").addClass("shimmer")
@@ -193,10 +192,11 @@ app.addCardData = (response) => {
     const pkmnSpriteCtnr = $(".pkmn-card-image")
     console.log("Shiny Check:", shinyCheck)
 
-    if (shinyCheck <= 70 && shinyCheck >= 48) {
+    if (shinyCheck <= 23 && shinyCheck >= 1) {
         const shinyImage = response.sprites.other["official-artwork"].front_shiny
 
         pkmnSprite.attr("src", shinyImage);
+        pkmnSprite.attr("alt", `A shiny ${pkmnName} appeared!`)
 
         pkmnSpriteCtnr.sparkle({
             color: "#FFFFFF",
@@ -220,7 +220,7 @@ app.addCardData = (response) => {
             }, 200);
         });
 
-        if (holoCheck <= 47 && holoCheck >= 24) {
+        if (holoCheck <= 24 && holoCheck >= 1) {
             cardBg.trigger("start.sparkle")
             cardBg.off("mouseover.sparkle")
             cardBg.off("mouseout.sparkle")
@@ -233,10 +233,11 @@ app.addCardData = (response) => {
         const pkmnImage = response.sprites.other["official-artwork"].front_default
 
         pkmnSprite.attr("src", pkmnImage);
+        pkmnSprite.attr("alt", `A wild ${pkmnName} appeared!`)
         pkmnSpriteCtnr.trigger("stop.sparkle")
         pkmnSpriteCtnr.off("mouseover.sparkle")
 
-        if (holoCheck <= 47 && holoCheck >= 24) {
+        if (holoCheck <= 24 && holoCheck >= 1) {
             cardBg.trigger("start.sparkle")
             cardBg.off("mouseover.sparkle")
             cardBg.off("mouseout.sparkle")
