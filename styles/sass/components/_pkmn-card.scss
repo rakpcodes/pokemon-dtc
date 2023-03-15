@@ -9,17 +9,12 @@
 }
 
 .pkmn-card {
-    // @include pixel-borders($corner-size: 2, $border-size: 1rem, $border-color: $color-card-border);
     border: 1rem solid $color-card-border;
-    // background-color: #fff;
     border-radius: 5px;
-
-    // width: 60%;
     display: flex;
     position: relative;
 
     &-top {
-        // border-right: 1rem solid $color-card-border;
         width: 40%;
         display: flex;
         flex-direction: column;
@@ -43,11 +38,8 @@
 
     &-name {
         @include black-box;
-        // @include pixel-box($corner-size: 2, $background-color: #fff);
         width: max-content;
-        // width: 80%;
         padding: 1rem 2rem;
-        // margin: 0 5rem;
         z-index: 10;
     }
 
@@ -75,7 +67,6 @@
     }
 
     &-image {
-        // width: 50%;
         width: 60%;
         z-index: 10;
 
@@ -93,9 +84,6 @@
         top: 50%;
         left: 41%;
         transform: translate(-61%, -50%);
-        // height: 6rem;
-        // left: -3rem;
-        // margin-right: -6rem;
 
         &-box {
             @include black-box;
@@ -118,7 +106,6 @@
     &-btm {
         background-color: $color-card-btm;
         border-left: 1rem solid $color-card-border;
-        // padding: 5rem 0 2rem 0;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -130,7 +117,6 @@
 
         .move {
             display: flex;
-            // flex-direction: column;
             justify-content: space-around;
             gap: 2rem;
             width: 90%;
@@ -148,7 +134,6 @@
 
             &-info {
                 width: 100%;
-                // padding: 1rem 2rem;
 
                 &__type {
                     margin-bottom: 2rem;
@@ -165,7 +150,6 @@
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    // margin-bottom: 2rem;
                     &-icon {
                         width: 3rem;
 

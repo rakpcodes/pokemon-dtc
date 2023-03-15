@@ -1,10 +1,11 @@
 @charset "UTF-8";
 @-webkit-keyframes shimmer {
   0% {
-    -webkit-transform: translateX(-300%);
-            transform: translateX(-300%);
+    -webkit-transform: translateX(-10%);
+            transform: translateX(-10%);
+    opacity: 0;
   }
-  70% {
+  50% {
     opacity: 1;
   }
   90%, 100% {
@@ -15,10 +16,11 @@
 }
 @keyframes shimmer {
   0% {
-    -webkit-transform: translateX(-300%);
-            transform: translateX(-300%);
+    -webkit-transform: translateX(-10%);
+            transform: translateX(-10%);
+    opacity: 0;
   }
-  70% {
+  50% {
     opacity: 1;
   }
   90%, 100% {
@@ -49,10 +51,6 @@
 
 .u-margin-top-big {
   margin-top: 8rem !important;
-}
-
-.hide {
-  display: none !important;
 }
 
 .bg-bug {

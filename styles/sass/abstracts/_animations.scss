@@ -1,9 +1,10 @@
 @keyframes shimmer {
     0% {
-        transform: translateX(-300%);
+        transform: translateX(-10%);
+        opacity: 0;
     }
 
-    70% {
+    50% {
         opacity: 1;
     }
 
