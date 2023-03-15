@@ -41,6 +41,10 @@
         width: max-content;
         padding: 1rem 2rem;
         z-index: 10;
+
+        @include respond(tab-land) {
+            width: 80%;
+        }
     }
 
     &-type {
@@ -84,6 +88,10 @@
         top: 50%;
         left: 41%;
         transform: translate(-61%, -50%);
+
+        @include respond(tab-land) {
+            top: 53%;
+        }
 
         &-box {
             @include black-box;

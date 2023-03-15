@@ -56,6 +56,10 @@
         &-text-box {
             &-sub-head {
                 font-size: $font-size-modal-heading;
+
+                // @include respond(tab-land) {
+                //     font-size: 2.5rem;
+                // }
             }
 
             &-symbols {

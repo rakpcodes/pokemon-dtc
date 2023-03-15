@@ -16,3 +16,33 @@
 
     animation: shimmer 4s infinite linear;
 }
+
+@mixin respond($breakpoint) {
+    // 425px / 16px = 26.5em
+    @if $breakpoint == phone-small {
+        @media (max-width: 26.5em) {
+            @content;
+        }
+    }
+
+    // 600px / 16px = 37.5em
+    @if $breakpoint == phone {
+        @media (max-width: 37.5em) {
+            @content;
+        }
+    }
+
+    // 900px / 16px = 56.25em
+    @if $breakpoint == tab-port {
+        @media (max-width: 56.25em) {
+            @content;
+        }
+    }
+
+    // 1200px / 16px = 75em
+    @if $breakpoint == tab-land {
+        @media (max-width: 75em) {
+            @content;
+        }
+    }
+}

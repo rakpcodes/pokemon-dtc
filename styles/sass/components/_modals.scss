@@ -112,6 +112,10 @@
 
             &-category {
                 width: 24%;
+
+                @include respond(tab-land) {
+                    width: 30%;
+                }
             }
 
             &-sub-head {

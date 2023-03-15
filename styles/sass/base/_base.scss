@@ -18,5 +18,9 @@ body {
     .wrapper {
         max-width: 1200px;
         margin: 0 auto;
+
+        @include respond(tab-land) {
+            max-width: 889px;
+        }
     }
 }
