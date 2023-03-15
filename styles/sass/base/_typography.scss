@@ -69,6 +69,21 @@
             &-sub-head {
                 font-size: $font-size-modal-heading;
             }
+
+            &-symbols {
+                &-type {
+                    &-text {
+                        font-size: $font-size-modal-text;
+                        text-transform: capitalize;
+                    }
+                }
+            }
+
+            &-stats {
+                &-text {
+                    font-size: $font-size-modal-text;
+                }
+            }
         }
     }
 }

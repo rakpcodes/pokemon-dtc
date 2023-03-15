@@ -959,6 +959,13 @@ html {
 .modal-legend-text-box-sub-head {
   font-size: 3rem;
 }
+.modal-legend-text-box-symbols-type-text {
+  font-size: 1.4rem;
+  text-transform: capitalize;
+}
+.modal-legend-text-box-stats-text {
+  font-size: 1.4rem;
+}
 
 .header {
   text-align: center;
@@ -1101,7 +1108,8 @@ html {
   border-radius: 5px;
   position: relative;
   display: inline-block;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
+  padding: 1.5rem 2rem;
 }
 .modal-legend-text-box {
   display: -webkit-box;
@@ -1112,15 +1120,31 @@ html {
           justify-content: center;
   gap: 3rem;
 }
+.modal-legend-text-box-category {
+  width: 30%;
+}
 .modal-legend-text-box-sub-head {
   border: 0.5rem solid #000;
   background-color: #fff;
   border-radius: 5px;
+  margin-bottom: 4rem;
 }
 .modal-legend-text-box-symbols {
   border: 0.5rem solid #000;
   background-color: #fff;
   border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1.5rem;
+  padding: 2rem 1rem;
+  height: 60vh;
+  overflow-y: scroll;
 }
 .modal-legend-text-box-symbols-type-icon {
   border: 0.5rem solid #000;
