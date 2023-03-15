@@ -25,11 +25,14 @@ const menuButton = $(".btn-menu")
 const navModal = $(".nav")
 const aboutModal = $(".about")
 const legendModal = $(".legend")
+const creditsModal = $(".credits")
 const aboutLink = $(".nav-about")
 const legendLink = $(".nav-legend")
+const creditsLink = $(".nav-credits")
 const btnBackNav = $(".btn-back-nav")
 const btnBackAbout = $(".btn-back-about")
 const btnBackLegend = $(".btn-back-legend")
+const btnBackCredits = $(".btn-back-credits")
 
 
 
@@ -109,8 +112,19 @@ legendLink.click(function () {
 btnBackLegend.click(function () {
     legendModal.addClass("hide");
     navModal.removeClass("hide")
-
 })
+
+creditsLink.click(function () {
+    navModal.addClass("hide");
+    creditsModal.removeClass("hide")
+})
+
+btnBackCredits.click(function () {
+    creditsModal.addClass("hide");
+    navModal.removeClass("hide")
+})
+
+
 
 const pkmnTypes = ["normal", "fire", "fighting", "water", "flying", "grass", "poison", "electric", "ground", "psychic", "rock", "ice", "bug", "dragon", "ghost", "dark", "steel", "fairy"]
 

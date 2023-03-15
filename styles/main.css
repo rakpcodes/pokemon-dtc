@@ -946,13 +946,13 @@ html {
 .modal-nav-list-item {
   font-size: 3rem;
 }
-.modal-about {
+.modal-about, .modal-credits {
   text-align: center;
 }
-.modal-about-head {
+.modal-about-head, .modal-credits-head {
   font-size: 3rem;
 }
-.modal-about-text-box {
+.modal-about-text-box, .modal-credits-text-box {
   font-size: 1.4rem;
 }
 .modal-legend {
@@ -1063,7 +1063,7 @@ html {
   position: relative;
   right: 3rem;
 }
-.modal-about-head {
+.modal-about-head, .modal-credits-head {
   border: 0.5rem solid #000;
   background-color: #fff;
   border-radius: 5px;
@@ -1072,7 +1072,7 @@ html {
   padding: 1.5rem 2rem;
   margin-bottom: 3rem;
 }
-.modal-about-text-box {
+.modal-about-text-box, .modal-credits-text-box {
   border: 0.5rem solid #000;
   background-color: #fff;
   border-radius: 5px;
@@ -1080,17 +1080,17 @@ html {
   overflow-y: scroll;
   padding: 3rem;
 }
-.modal-about-text-box-image {
+.modal-about-text-box-image, .modal-credits-text-box-image {
   display: inline-block;
   width: 20rem;
   border: 3px solid #3c5aa6;
   margin: 3rem 0;
   position: relative;
 }
-.modal-about-text-box-image:nth-child(2) {
+.modal-about-text-box-image:nth-child(2), .modal-credits-text-box-image:nth-child(2) {
   z-index: 100;
 }
-.modal-about-text-box-image__img {
+.modal-about-text-box-image__img, .modal-credits-text-box-image__img {
   display: block;
   width: 100%;
   -o-object-fit: cover;
@@ -1098,7 +1098,7 @@ html {
   position: relative;
   z-index: 150;
 }
-.modal-about-text-box-image .shimmer {
+.modal-about-text-box-image .shimmer, .modal-credits-text-box-image .shimmer {
   position: absolute;
   top: 0;
   left: 0;
@@ -1108,6 +1108,19 @@ html {
   background: linear-gradient(100deg, rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0.6156862745) 50%, rgba(255, 255, 255, 0) 80%);
   -webkit-animation: shimmer 4s infinite linear;
           animation: shimmer 4s infinite linear;
+}
+.modal-credits-text-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  overflow-y: auto;
 }
 .modal-legend-head {
   border: 0.5rem solid #000;
