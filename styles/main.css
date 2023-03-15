@@ -959,12 +959,11 @@ html {
 .modal-legend-text-box-sub-head {
   font-size: 3rem;
 }
-.modal-legend-text-box-symbols-type-text {
+.modal-legend-text-box-symbols {
   font-size: 1.4rem;
-  text-transform: capitalize;
 }
-.modal-legend-text-box-stats-text {
-  font-size: 1.4rem;
+.modal-legend-text-box-symbols-type-text {
+  text-transform: capitalize;
 }
 
 .header {
@@ -1121,7 +1120,7 @@ html {
   gap: 3rem;
 }
 .modal-legend-text-box-category {
-  width: 30%;
+  width: 24%;
 }
 .modal-legend-text-box-sub-head {
   border: 0.5rem solid #000;
@@ -1133,24 +1132,18 @@ html {
   border: 0.5rem solid #000;
   background-color: #fff;
   border-radius: 5px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 1.5rem;
-  padding: 2rem 1rem;
+  padding: 2rem;
   height: 60vh;
   overflow-y: scroll;
+}
+.modal-legend-text-box-symbols :not(:last-child) {
+  margin-bottom: 1.5rem;
 }
 .modal-legend-text-box-symbols-type-icon {
   border: 0.5rem solid #000;
   background-color: #fff;
   border-radius: 5px;
-  width: 7rem;
+  width: 10rem;
   border-radius: 50%;
   padding: 0.5rem;
   margin: 0;
@@ -1164,6 +1157,17 @@ html {
   display: block;
   padding: 0.7rem;
   z-index: 10;
+}
+.modal-legend-text-box-symbols-stats-icon, .modal-legend-text-box-symbols-classes-icon {
+  width: 5.5rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+.modal-legend-text-box-symbols-stats-icon__img, .modal-legend-text-box-symbols-classes-icon__img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
 }
 
 .hide {

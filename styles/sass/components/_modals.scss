@@ -104,7 +104,7 @@
             gap: 3rem;
 
             &-category {
-                width: 30%;
+                width: 24%;
             }
 
             &-sub-head {
@@ -114,18 +114,18 @@
 
             &-symbols {
                 @include black-box;
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 1.5rem;
-                padding: 2rem 1rem;
+                padding: 2rem;
                 height: 60vh;
                 overflow-y: scroll;
+
+                :not(:last-child) {
+                    margin-bottom: 1.5rem;
+                }
 
                 &-type {
                     &-icon {
                         @include black-box;
-                        width: 7rem;
+                        width: 10rem;
                         border-radius: 50%;
                         padding: 0.5rem;
                         margin: 0;
@@ -138,6 +138,21 @@
                             display: block;
                             padding: 0.7rem;
                             z-index: 10;
+                        }
+                    }
+                }
+
+                &-stats,
+                &-classes {
+                    &-icon {
+                        width: 5.5rem;
+                        margin-bottom: 1rem;
+                        display: inline-block;
+
+                        &__img {
+                            width: 100%;
+                            object-fit: cover;
+                            display: block;
                         }
                     }
                 }

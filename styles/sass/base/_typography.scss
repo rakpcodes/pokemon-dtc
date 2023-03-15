@@ -71,17 +71,11 @@
             }
 
             &-symbols {
+                font-size: $font-size-modal-text;
                 &-type {
                     &-text {
-                        font-size: $font-size-modal-text;
                         text-transform: capitalize;
                     }
-                }
-            }
-
-            &-stats {
-                &-text {
-                    font-size: $font-size-modal-text;
                 }
             }
         }
