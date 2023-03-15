@@ -5,7 +5,6 @@
     height: 100vh;
     background-color: $color-bg-modal;
     z-index: 100;
-    // display: none;
 
     &-nav {
         &-text-box {
@@ -27,10 +26,17 @@
             padding: 5rem 0;
 
             &-item {
-                display: block;
                 &:not(:last-child) {
                     margin-bottom: 5rem;
                 }
+            }
+
+            &-button {
+                display: inline-block;
+                // all: unset;
+                border: none;
+                background: transparent;
+                padding: 1rem;
 
                 &:hover,
                 &:focus {
@@ -178,6 +184,10 @@
                 &:hover,
                 &:focus {
                     transform: translateY(-5px);
+                }
+
+                &:active {
+                    transform: translateY(-2px);
                 }
             }
         }

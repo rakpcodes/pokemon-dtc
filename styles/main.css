@@ -943,8 +943,9 @@ html {
   list-style: none;
   font-size: 0;
 }
-.modal-nav-list-item {
+.modal-nav-list-button {
   font-size: 3rem;
+  font-family: "Press Start 2P", cursive;
 }
 .modal-about, .modal-credits {
   text-align: center;
@@ -1050,18 +1051,21 @@ html {
   border-radius: 5px;
   padding: 5rem 0;
 }
-.modal-nav-list-item {
-  display: block;
-}
 .modal-nav-list-item:not(:last-child) {
   margin-bottom: 5rem;
 }
-.modal-nav-list-item:hover, .modal-nav-list-item:focus {
+.modal-nav-list-button {
+  display: inline-block;
+  border: none;
+  background: transparent;
+  padding: 1rem;
+}
+.modal-nav-list-button:hover, .modal-nav-list-button:focus {
   cursor: pointer;
   position: relative;
   right: 1rem;
 }
-.modal-nav-list-item:hover::before, .modal-nav-list-item:focus::before {
+.modal-nav-list-button:hover::before, .modal-nav-list-button:focus::before {
   content: "▶";
   display: inline-block;
   position: relative;
@@ -1204,6 +1208,10 @@ html {
 .modal-credits-text-box__info-link:hover, .modal-credits-text-box__info-link:focus {
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
+}
+.modal-credits-text-box__info-link:active {
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
 }
 
 .hide {

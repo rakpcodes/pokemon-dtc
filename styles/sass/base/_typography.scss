@@ -21,8 +21,9 @@
             list-style: none;
             font-size: 0;
 
-            &-item {
+            &-button {
                 font-size: $font-size-modal-heading;
+                font-family: $font-family-main;
             }
         }
     }
