@@ -37,6 +37,11 @@
 
         &-text-box {
             font-size: $font-size-modal-text;
+
+            &__info-link {
+                text-decoration: none;
+                color: $color-text;
+            }
         }
     }
 
