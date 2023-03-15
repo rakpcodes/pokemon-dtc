@@ -980,7 +980,7 @@ html {
   text-align: center;
 }
 .header-main {
-  font-size: 6rem;
+  font-size: 7rem;
   font-family: "Pokemon Solid", cursive;
   -webkit-text-stroke: 0.2rem #2a75bb;
   -webkit-text-fill-color: #ffcb05;
@@ -1216,6 +1216,18 @@ html {
 
 .hide {
   display: none;
+}
+
+.header-main {
+  text-shadow: 0 1rem 3px #000;
+}
+.header-text {
+  border: 0.5rem solid #000;
+  background-color: #fff;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 1rem 2rem;
+  width: 60%;
 }
 
 .section-card-display {

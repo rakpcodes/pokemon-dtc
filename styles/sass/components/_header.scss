@@ -1,0 +1,12 @@
+.header {
+    &-main {
+        text-shadow: 0 1rem 3px #000;
+    }
+
+    &-text {
+        @include black-box;
+        display: inline-block;
+        padding: 1rem 2rem;
+        width: 60%;
+    }
+}
