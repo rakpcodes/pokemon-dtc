@@ -646,7 +646,6 @@ body {
   background-image: url(../assets/background-main.jpg);
   background-size: cover;
   background-attachment: fixed;
-  background-repeat: no-repeat;
 }
 body .wrapper {
   max-width: 1200px;
@@ -1181,29 +1180,6 @@ html {
 
 .hide {
   display: none;
-}
-
-.navbar {
-  background-color: #ff1111;
-  padding: 1rem 0 2rem 0;
-  text-align: center;
-  position: sticky;
-  top: 0;
-  z-index: 2;
-}
-.navbar .wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-.navbar-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4rem;
 }
 
 .section-card-display {
