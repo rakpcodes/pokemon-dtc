@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @-webkit-keyframes shimmer {
   0% {
     -webkit-transform: translateX(-300%);
@@ -644,6 +645,9 @@ body {
   color: #000;
   font-family: "Press Start 2P", cursive;
   line-height: 1.7;
+  background-image: url(../assets/background-main.jpg);
+  background-size: cover;
+  background-attachment: fixed;
 }
 body .wrapper {
   max-width: 1200px;
@@ -923,31 +927,55 @@ html {
   overflow: hidden;
 }
 
-.navbar {
-  font-family: "Pokemon Solid", cursive;
-  font-size: 3rem;
-  -webkit-text-stroke: 0.2rem #2a75bb;
-  -webkit-text-fill-color: #ffcb05;
-  letter-spacing: 0.3rem;
-  text-align: center;
-}
-.navbar-logo {
-  -webkit-text-stroke: 0.2rem #2a75bb;
-  -webkit-text-fill-color: #ffcb05;
-  text-decoration: none;
-}
-.navbar-list {
-  list-style: none;
+.btn-menu, .btn-back {
+  font-family: "Press Start 2P", cursive;
+  font-size: 2rem;
+  text-transform: uppercase;
 }
 
-.modal-about {
+.modal-nav {
   text-align: center;
-}
-.modal-about-header {
   font-size: 3rem;
 }
-.modal-about-text-box {
+.modal-nav-head {
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+.modal-nav-list {
+  list-style: none;
+  font-size: 0;
+}
+.modal-nav-list-button {
+  font-size: 3rem;
+  font-family: "Press Start 2P", cursive;
+}
+.modal-about, .modal-credits {
+  text-align: center;
+}
+.modal-about-head, .modal-credits-head {
+  font-size: 3rem;
+}
+.modal-about-text-box, .modal-credits-text-box {
   font-size: 1.4rem;
+}
+.modal-about-text-box__info-link, .modal-credits-text-box__info-link {
+  text-decoration: none;
+  color: #000;
+}
+.modal-legend {
+  text-align: center;
+}
+.modal-legend-head {
+  font-size: 3rem;
+}
+.modal-legend-text-box-sub-head {
+  font-size: 3rem;
+}
+.modal-legend-text-box-symbols {
+  font-size: 1.4rem;
+}
+.modal-legend-text-box-symbols-type-text {
+  text-transform: capitalize;
 }
 
 .header {
@@ -996,27 +1024,200 @@ html {
   font-size: 1.2rem;
 }
 
-.navbar {
-  background-color: #ff1111;
-  padding: 1rem 0 2rem 0;
-  text-align: center;
-  position: sticky;
+.modal {
+  position: fixed;
   top: 0;
-  z-index: 2;
+  width: 100.1%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7607843137);
+  z-index: 100;
 }
-.navbar .wrapper {
+.modal-nav-text-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 35%;
+}
+.modal-nav-head {
+  border: 0.5rem solid #000;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+.modal-nav-list {
+  border: 0.5rem solid #000;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 5rem 0;
+}
+.modal-nav-list-item:not(:last-child) {
+  margin-bottom: 5rem;
+}
+.modal-nav-list-button {
+  display: inline-block;
+  border: none;
+  background: transparent;
+  padding: 1rem;
+}
+.modal-nav-list-button:hover, .modal-nav-list-button:focus {
+  cursor: pointer;
+  position: relative;
+  right: 1rem;
+}
+.modal-nav-list-button:hover::before, .modal-nav-list-button:focus::before {
+  content: "▶";
+  display: inline-block;
+  position: relative;
+  right: 3rem;
+}
+.modal-about-head, .modal-credits-head {
+  border: 0.5rem solid #000;
+  background-color: #fff;
+  border-radius: 5px;
+  position: relative;
+  display: inline-block;
+  padding: 1.5rem 2rem;
+  margin-bottom: 3rem;
+}
+.modal-about-text-box, .modal-credits-text-box {
+  border: 0.5rem solid #000;
+  background-color: #fff;
+  border-radius: 5px;
+  height: 70vh;
+  overflow-y: scroll;
+  padding: 3rem;
+}
+.modal-about-text-box-image, .modal-credits-text-box-image {
+  display: inline-block;
+  width: 30rem;
+  border: 3px solid #3c5aa6;
+  margin: 3rem 0;
+  position: relative;
+}
+.modal-about-text-box-image:nth-child(2), .modal-credits-text-box-image:nth-child(2) {
+  z-index: 100;
+}
+.modal-about-text-box-image__img, .modal-credits-text-box-image__img {
+  display: block;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+  z-index: 150;
+}
+.modal-about-text-box-image .shimmer, .modal-credits-text-box-image .shimmer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  overflow-y: hidden;
+  background: linear-gradient(100deg, rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0.6156862745) 50%, rgba(255, 255, 255, 0) 80%);
+  -webkit-animation: shimmer 4s infinite linear;
+          animation: shimmer 4s infinite linear;
+}
+.modal-legend-head {
+  border: 0.5rem solid #000;
+  background-color: #fff;
+  border-radius: 5px;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 3rem;
+  padding: 1.5rem 2rem;
+}
+.modal-legend-text-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 3rem;
 }
-.navbar-list {
+.modal-legend-text-box-category {
+  width: 24%;
+}
+.modal-legend-text-box-sub-head {
+  border: 0.5rem solid #000;
+  background-color: #fff;
+  border-radius: 5px;
+  margin-bottom: 4rem;
+}
+.modal-legend-text-box-symbols {
+  border: 0.5rem solid #000;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 2rem;
+  height: 60vh;
+  overflow-y: scroll;
+}
+.modal-legend-text-box-symbols :not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+.modal-legend-text-box-symbols-type-icon {
+  border: 0.5rem solid #000;
+  background-color: #fff;
+  border-radius: 5px;
+  width: 10rem;
+  border-radius: 50%;
+  padding: 0.5rem;
+  margin: 0;
+  display: inline-block;
+}
+.modal-legend-text-box-symbols-type-icon__img {
+  width: 100%;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  padding: 0.7rem;
+  z-index: 10;
+}
+.modal-legend-text-box-symbols-stats-icon, .modal-legend-text-box-symbols-classes-icon {
+  width: 5.5rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+.modal-legend-text-box-symbols-stats-icon__img, .modal-legend-text-box-symbols-classes-icon__img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+.modal-credits-text-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 4rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  overflow-y: auto;
+}
+.modal-credits-text-box__info-link {
+  display: inline-block;
+  border-bottom: 3px solid #3c5aa6;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  padding: 1rem 0;
+}
+.modal-credits-text-box__info-link:hover, .modal-credits-text-box__info-link:focus {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+.modal-credits-text-box__info-link:active {
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+}
+
+.hide {
+  display: none;
 }
 
 .section-card-display {
@@ -1239,6 +1440,34 @@ html {
   padding-top: 1rem;
 }
 
+.btn-menu, .btn-back {
+  border: 0.5rem solid #000;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 1rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  position: sticky;
+  top: 5%;
+  left: 87%;
+  z-index: 90;
+}
+.btn-menu:hover, .btn-menu:focus, .btn-back:hover, .btn-back:focus {
+  -webkit-transform: translateY(-0.2rem);
+          transform: translateY(-0.2rem);
+  -webkit-box-shadow: 0 0.5rem 0.5rem #000;
+          box-shadow: 0 0.5rem 0.5rem #000;
+  cursor: pointer;
+}
+.btn-menu:active, .btn-back:active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-box-shadow: 0 0.3rem 0.3rem #000;
+          box-shadow: 0 0.3rem 0.3rem #000;
+}
+.btn-back {
+  left: 86%;
+}
 .btn-new-card {
   all: unset;
   width: 10rem;
@@ -1252,6 +1481,7 @@ html {
           transform: translateY(-0.5rem);
   -webkit-box-shadow: 0 1.3rem 1rem #000;
           box-shadow: 0 1.3rem 1rem #000;
+  cursor: pointer;
 }
 .btn-new-card:active {
   -webkit-transform: translateY(0);
@@ -1262,4 +1492,8 @@ html {
 .btn-pokeball {
   width: 100%;
   display: block;
+}
+
+.disappear {
+  opacity: 0;
 }
