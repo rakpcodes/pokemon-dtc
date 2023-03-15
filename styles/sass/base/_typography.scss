@@ -1,32 +1,71 @@
-.navbar {
-    font-family: $font-family-special;
-    font-size: $font-size-regular;
-    -webkit-text-stroke: 0.2rem $color-text-line-special;
-    -webkit-text-fill-color: $color-text-fill-special;
-    letter-spacing: 0.3rem;
-    text-align: center;
-
-    &-logo {
-        -webkit-text-stroke: 0.2rem $color-text-line-special;
-        -webkit-text-fill-color: $color-text-fill-special;
-        text-decoration: none;
-    }
-
-    &-list {
-        list-style: none;
+.btn {
+    &-menu,
+    &-back {
+        font-family: $font-family-main;
+        font-size: $font-size-header-text;
+        text-transform: uppercase;
     }
 }
 
 .modal {
-    &-about {
+    &-nav {
+        text-align: center;
+        font-size: $font-size-modal-heading;
+
+        &-head {
+            text-transform: uppercase;
+            font-size: $font-size-modal-heading;
+        }
+
+        &-list {
+            list-style: none;
+            font-size: 0;
+
+            &-button {
+                font-size: $font-size-modal-heading;
+                font-family: $font-family-main;
+            }
+        }
+    }
+
+    &-about,
+    &-credits {
         text-align: center;
 
-        &-header {
+        &-head {
             font-size: $font-size-modal-heading;
         }
 
         &-text-box {
             font-size: $font-size-modal-text;
+
+            &__info-link {
+                text-decoration: none;
+                color: $color-text;
+            }
+        }
+    }
+
+    &-legend {
+        text-align: center;
+
+        &-head {
+            font-size: $font-size-modal-heading;
+        }
+
+        &-text-box {
+            &-sub-head {
+                font-size: $font-size-modal-heading;
+            }
+
+            &-symbols {
+                font-size: $font-size-modal-text;
+                &-type {
+                    &-text {
+                        text-transform: capitalize;
+                    }
+                }
+            }
         }
     }
 }

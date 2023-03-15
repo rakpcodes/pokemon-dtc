@@ -20,6 +20,132 @@
 
 */
 
+const body = $("body")
+const menuButton = $(".btn-menu")
+const navModal = $(".nav")
+const aboutModal = $(".about")
+const legendModal = $(".legend")
+const creditsModal = $(".credits")
+const aboutLink = $(".nav-about")
+const legendLink = $(".nav-legend")
+const creditsLink = $(".nav-credits")
+const btnBackNav = $(".btn-back-nav")
+const btnBackAbout = $(".btn-back-about")
+const btnBackLegend = $(".btn-back-legend")
+const btnBackCredits = $(".btn-back-credits")
+
+
+
+menuButton.click(function () {
+    menuButton.addClass("disappear");
+    navModal.removeClass("hide")
+    body[0].style.overflow = "hidden"
+    body[0].style.paddingRight = "1.5rem"
+})
+
+btnBackNav.click(function () {
+    navModal.addClass("hide")
+    menuButton.removeClass("disappear")
+    body[0].style.overflow = ""
+    body[0].style.paddingRight = ""
+
+})
+
+aboutLink.click(function () {
+    navModal.addClass("hide");
+    aboutModal.removeClass("hide")
+
+    // Sparkle Effect for example images
+
+    const exampleBg = $(".ex-bg")
+
+    exampleBg.sparkle({
+        color: "rainbow",
+        count: 20,
+        speed: 3,
+        minSize: 4,
+        overlap: -3,
+    });
+
+    exampleBg.trigger("start.sparkle")
+    exampleBg.off("mouseover.sparkle")
+    exampleBg.off("mouseout.sparkle")
+
+    const exampleImg = $(".ex-img")
+
+    exampleImg.sparkle({
+        color: "#FFFFFF",
+        count: 5,
+        speed: 2,
+        minSize: 5,
+        direction: "up",
+    });
+
+    exampleImg.trigger("start.sparkle")
+    exampleImg.off("mouseover.sparkle")
+    exampleImg.off("mouseout.sparkle")
+
+    let timer;
+    $(window).on("resize", function () {
+        clearTimeout(timer);
+        timer = setTimeout(function () {
+            exampleBg.trigger("resize.sparkle");
+            exampleImg.trigger("resize.sparkle");
+        }, 100);
+    });
+
+})
+
+btnBackAbout.click(function () {
+    aboutModal.addClass("hide");
+    navModal.removeClass("hide")
+
+    $(".ex-bg > .sparkle-canvas").remove()
+
+})
+
+legendLink.click(function () {
+    navModal.addClass("hide");
+    legendModal.removeClass("hide")
+})
+
+btnBackLegend.click(function () {
+    legendModal.addClass("hide");
+    navModal.removeClass("hide")
+})
+
+creditsLink.click(function () {
+    navModal.addClass("hide");
+    creditsModal.removeClass("hide")
+})
+
+btnBackCredits.click(function () {
+    creditsModal.addClass("hide");
+    navModal.removeClass("hide")
+})
+
+
+
+const pkmnTypes = ["normal", "fire", "fighting", "water", "flying", "grass", "poison", "electric", "ground", "psychic", "rock", "ice", "bug", "dragon", "ghost", "dark", "steel", "fairy"]
+
+const symbolCtnr = $(".types")
+
+pkmnTypes.forEach(type => {
+
+    symbolCtnr.append(`
+    <div class="modal-legend-text-box-symbols-type">
+        <div class="modal-legend-text-box-symbols-type-icon">
+        <img src="./assets/pkmn-type-icons/${type}.svg" alt="A ${type}-type icon."
+            class="modal-legend-text-box-symbols-type-icon__img bg-${type}">
+    </div>
+    <p class="modal-legend-text-box-symbols-type-text">${type}</p>
+</div>
+    `);
+
+})
+
+
+
 const app = {};
 
 // First API Call to retrieve Random Pokemon
@@ -75,7 +201,7 @@ app.addCardData = (response) => {
     const holoCheck = chance.natural({ min: 1, max: 100 })
     console.log("Holo Check:", holoCheck)
 
-    if (holoCheck <= 47 && holoCheck >= 24) {
+    if (holoCheck <= 24 && holoCheck >= 1) {
         $(".sparkle-canvas").remove()
         cardBg.addClass(`pkmn-card-top bg-holo`)
         $(".holo").addClass("shimmer")
@@ -113,14 +239,15 @@ app.addCardData = (response) => {
     const pkmnSpriteCtnr = $(".pkmn-card-image")
     console.log("Shiny Check:", shinyCheck)
 
-    if (shinyCheck <= 70 && shinyCheck >= 48) {
+    if (shinyCheck <= 23 && shinyCheck >= 1) {
         const shinyImage = response.sprites.other["official-artwork"].front_shiny
 
         pkmnSprite.attr("src", shinyImage);
+        pkmnSprite.attr("alt", `A shiny ${pkmnName} appeared!`)
 
         pkmnSpriteCtnr.sparkle({
             color: "#FFFFFF",
-            count: 7,
+            count: 8,
             speed: 4,
             minSize: 15,
             direction: "up",
@@ -140,7 +267,7 @@ app.addCardData = (response) => {
             }, 200);
         });
 
-        if (holoCheck <= 47 && holoCheck >= 24) {
+        if (holoCheck <= 24 && holoCheck >= 1) {
             cardBg.trigger("start.sparkle")
             cardBg.off("mouseover.sparkle")
             cardBg.off("mouseout.sparkle")
@@ -153,10 +280,11 @@ app.addCardData = (response) => {
         const pkmnImage = response.sprites.other["official-artwork"].front_default
 
         pkmnSprite.attr("src", pkmnImage);
+        pkmnSprite.attr("alt", `A wild ${pkmnName} appeared!`)
         pkmnSpriteCtnr.trigger("stop.sparkle")
         pkmnSpriteCtnr.off("mouseover.sparkle")
 
-        if (holoCheck <= 47 && holoCheck >= 24) {
+        if (holoCheck <= 24 && holoCheck >= 1) {
             cardBg.trigger("start.sparkle")
             cardBg.off("mouseover.sparkle")
             cardBg.off("mouseout.sparkle")
