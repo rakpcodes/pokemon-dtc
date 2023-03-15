@@ -11,6 +11,10 @@ body {
     color: $color-text;
     font-family: $font-family-main;
     line-height: 1.7;
+    background-image: url(../assets/background-main.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 
     .wrapper {
         max-width: 1200px;

@@ -1,10 +1,11 @@
 @charset "UTF-8";
 @-webkit-keyframes shimmer {
   0% {
-    -webkit-transform: translateX(-200%);
-            transform: translateX(-200%);
+    -webkit-transform: translateX(-10%);
+            transform: translateX(-10%);
+    opacity: 0;
   }
-  70% {
+  50% {
     opacity: 1;
   }
   90%, 100% {
@@ -15,10 +16,11 @@
 }
 @keyframes shimmer {
   0% {
-    -webkit-transform: translateX(-200%);
-            transform: translateX(-200%);
+    -webkit-transform: translateX(-10%);
+            transform: translateX(-10%);
+    opacity: 0;
   }
-  70% {
+  50% {
     opacity: 1;
   }
   90%, 100% {
@@ -641,6 +643,10 @@ body {
   color: #000;
   font-family: "Press Start 2P", cursive;
   line-height: 1.7;
+  background-image: url(../assets/background-main.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 body .wrapper {
   max-width: 1200px;
