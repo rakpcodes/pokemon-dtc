@@ -1049,11 +1049,14 @@ html {
 }
 .modal-nav-list-item:hover, .modal-nav-list-item:focus {
   cursor: pointer;
+  position: relative;
+  right: 1rem;
 }
 .modal-nav-list-item:hover::before, .modal-nav-list-item:focus::before {
   content: "▶";
   display: inline-block;
-  margin-right: 1rem;
+  position: relative;
+  right: 3rem;
 }
 .modal-about-head {
   border: 0.5rem solid #000;
