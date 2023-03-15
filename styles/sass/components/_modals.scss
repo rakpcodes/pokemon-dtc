@@ -1,0 +1,199 @@
+.modal {
+    position: fixed;
+    top: 0;
+    width: 100.1%;
+    height: 100vh;
+    background-color: $color-bg-modal;
+    z-index: 100;
+
+    &-nav {
+        &-text-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 35%;
+        }
+
+        &-head {
+            @include black-box;
+            padding: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        &-list {
+            @include black-box;
+            padding: 5rem 0;
+
+            &-item {
+                &:not(:last-child) {
+                    margin-bottom: 5rem;
+                }
+            }
+
+            &-button {
+                display: inline-block;
+                // all: unset;
+                border: none;
+                background: transparent;
+                padding: 1rem;
+
+                &:hover,
+                &:focus {
+                    cursor: pointer;
+                    position: relative;
+                    right: 1rem;
+
+                    &::before {
+                        content: "\25b6";
+                        display: inline-block;
+                        position: relative;
+                        right: 3rem;
+                    }
+                }
+            }
+        }
+    }
+
+    &-about,
+    &-credits {
+        &-head {
+            @include black-box;
+            position: relative;
+            display: inline-block;
+            padding: 1.5rem 2rem;
+            margin-bottom: 3rem;
+        }
+
+        &-text-box {
+            @include black-box;
+            height: 70vh;
+            overflow-y: scroll;
+            padding: 3rem;
+
+            &-image {
+                display: inline-block;
+                width: 30rem;
+                border: 3px solid $color-card-border;
+                margin: 3rem 0;
+                position: relative;
+
+                &:nth-child(2) {
+                    z-index: 100;
+                }
+
+                &__img {
+                    display: block;
+                    width: 100%;
+                    object-fit: cover;
+                    position: relative;
+                    z-index: 150;
+                }
+
+                .shimmer {
+                    @include shimmer;
+                }
+            }
+        }
+    }
+
+    &-legend {
+        &-head {
+            @include black-box;
+            position: relative;
+            display: inline-block;
+            margin-bottom: 3rem;
+            padding: 1.5rem 2rem;
+        }
+
+        &-text-box {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+
+            &-category {
+                width: 24%;
+            }
+
+            &-sub-head {
+                @include black-box;
+                margin-bottom: 4rem;
+            }
+
+            &-symbols {
+                @include black-box;
+                padding: 2rem;
+                height: 60vh;
+                overflow-y: scroll;
+
+                :not(:last-child) {
+                    margin-bottom: 1.5rem;
+                }
+
+                &-type {
+                    &-icon {
+                        @include black-box;
+                        width: 10rem;
+                        border-radius: 50%;
+                        padding: 0.5rem;
+                        margin: 0;
+                        display: inline-block;
+
+                        &__img {
+                            width: 100%;
+                            border-radius: 50%;
+                            object-fit: cover;
+                            display: block;
+                            padding: 0.7rem;
+                            z-index: 10;
+                        }
+                    }
+                }
+
+                &-stats,
+                &-classes {
+                    &-icon {
+                        width: 5.5rem;
+                        margin-bottom: 1rem;
+                        display: inline-block;
+
+                        &__img {
+                            width: 100%;
+                            object-fit: cover;
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &-credits {
+        &-text-box {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            overflow-y: auto;
+
+            &__info-link {
+                display: inline-block;
+                border-bottom: 3px solid $color-card-border;
+                transition: all 0.2s;
+                padding: 1rem 0;
+
+                &:hover,
+                &:focus {
+                    transform: translateY(-5px);
+                }
+
+                &:active {
+                    transform: translateY(-2px);
+                }
+            }
+        }
+    }
+}
+
+.hide {
+    display: none;
+}
