@@ -147,6 +147,10 @@
                 height: 60vh;
                 overflow-y: scroll;
 
+                @include respond(tab-land) {
+                    height: 55vh;
+                }
+
                 :not(:last-child) {
                     margin-bottom: 1.5rem;
                 }
