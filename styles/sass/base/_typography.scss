@@ -99,6 +99,10 @@
         -webkit-text-stroke: 0.2rem $color-text-line-special;
         -webkit-text-fill-color: $color-text-fill-special;
         letter-spacing: 1rem;
+
+        @include respond(phone-small) {
+            font-size: 6rem;
+        }
     }
 
     &-text {

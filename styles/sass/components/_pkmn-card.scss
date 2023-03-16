@@ -13,6 +13,8 @@
     border-radius: 5px;
     display: flex;
     position: relative;
+    animation: move-in-btm 1s ease-out 0.5s;
+    animation-fill-mode: backwards;
 
     @include respond(tab-port) {
         flex-direction: column;
