@@ -1025,7 +1025,7 @@ html {
   font-family: "Pokemon Solid", cursive;
   -webkit-text-stroke: 0.2rem #2a75bb;
   -webkit-text-fill-color: #ffcb05;
-  letter-spacing: 0.6rem;
+  letter-spacing: 1rem;
 }
 .header-text {
   font-size: 2rem;
