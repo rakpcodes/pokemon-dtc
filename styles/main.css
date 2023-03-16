@@ -866,6 +866,11 @@ html {
     width: 27%;
   }
 }
+@media (max-width: 37.5em) {
+  .modal-legend-text-box-category {
+    width: 28%;
+  }
+}
 .modal-legend-text-box-sub-head {
   border: 0.5rem solid #000;
   background-color: #fff;

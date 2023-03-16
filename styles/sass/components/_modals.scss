@@ -133,6 +133,10 @@
                 @include respond(tab-land) {
                     width: 27%;
                 }
+
+                @include respond(phone) {
+                    width: 28%;
+                }
             }
 
             &-sub-head {
