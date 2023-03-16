@@ -981,6 +981,7 @@ html {
 }
 .modal-about-text-box, .modal-credits-text-box {
   font-size: 1.4rem;
+  line-height: 3rem;
 }
 .modal-about-text-box__info-link, .modal-credits-text-box__info-link {
   text-decoration: none;
