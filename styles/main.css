@@ -1032,7 +1032,7 @@ html {
   border-radius: 5px;
   display: inline-block;
   padding: 1rem 2rem;
-  width: 95%;
+  width: 85%;
 }
 @media (max-width: 56.25em) {
   .header-text {

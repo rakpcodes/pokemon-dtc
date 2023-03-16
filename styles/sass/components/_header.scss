@@ -20,7 +20,7 @@
         @include black-box;
         display: inline-block;
         padding: 1rem 2rem;
-        width: 95%;
+        width: 85%;
 
         @include respond(tab-port) {
             width: 90%;
