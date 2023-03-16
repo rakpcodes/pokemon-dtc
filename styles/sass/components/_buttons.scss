@@ -6,8 +6,16 @@
         transition: all 0.2s;
         position: sticky;
         top: 5%;
-        left: 87%;
+        left: 85%;
         z-index: 90;
+
+        @include respond(tab-port) {
+            left: 80%;
+        }
+
+        @include respond(phone) {
+            left: 73%;
+        }
 
         &:hover,
         &:focus {
@@ -23,7 +31,15 @@
     }
 
     &-back {
-        left: 86%;
+        left: 85%;
+
+        @include respond(tab-port) {
+            left: 80%;
+        }
+
+        @include respond(phone) {
+            left: 73%;
+        }
     }
 
     &-new-card {

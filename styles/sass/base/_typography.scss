@@ -34,6 +34,10 @@
 
         &-head {
             font-size: $font-size-modal-heading;
+
+            @include respond(phone) {
+                font-size: 2rem;
+            }
         }
 
         &-text-box {
@@ -51,19 +55,27 @@
 
         &-head {
             font-size: $font-size-modal-heading;
+
+            @include respond(phone) {
+                font-size: 2rem;
+            }
         }
 
         &-text-box {
             &-sub-head {
                 font-size: $font-size-modal-heading;
 
-                // @include respond(tab-land) {
-                //     font-size: 2.5rem;
-                // }
+                @include respond(tab-port) {
+                    font-size: 1rem;
+                }
             }
 
             &-symbols {
                 font-size: $font-size-modal-text;
+
+                @include respond(phone) {
+                    font-size: 1rem;
+                }
                 &-type {
                     &-text {
                         text-transform: capitalize;
@@ -102,6 +114,10 @@
 
             .stats-box-value {
                 font-size: $font-size-card-text;
+
+                @include respond(phone-small) {
+                    font-size: 1rem;
+                }
             }
 
             .move {
@@ -111,15 +127,27 @@
                     &__name {
                         font-size: $font-size-card-heading;
                         text-transform: capitalize;
+
+                        @include respond(phone-small) {
+                            font-size: 1.2rem;
+                        }
                     }
 
                     &__type {
                         font-size: $font-size-card-text;
                         text-transform: capitalize;
+
+                        @include respond(phone-small) {
+                            font-size: 1rem;
+                        }
                     }
 
                     &__desc {
                         font-size: $font-size-card-text;
+
+                        @include respond(phone-small) {
+                            font-size: 1rem;
+                        }
                     }
                 }
 
@@ -127,10 +155,18 @@
                     &-class-heading,
                     &-power-heading {
                         font-size: $font-size-card-heading;
+
+                        @include respond(phone-small) {
+                            font-size: 1.2rem;
+                        }
                     }
 
                     &-power-value {
                         font-size: $font-size-card-text;
+
+                        @include respond(phone-small) {
+                            font-size: 1rem;
+                        }
                     }
                 }
             }

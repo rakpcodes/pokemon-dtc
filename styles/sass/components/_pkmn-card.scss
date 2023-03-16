@@ -14,6 +14,12 @@
     display: flex;
     position: relative;
 
+    @include respond(tab-port) {
+        flex-direction: column;
+        align-items: center;
+        width: 89%;
+    }
+
     &-top {
         width: 40%;
         display: flex;
@@ -22,6 +28,11 @@
         padding: 3rem 0;
         position: relative;
         z-index: -1;
+
+        @include respond(tab-port) {
+            width: 100%;
+            padding-bottom: 0;
+        }
 
         .shimmer {
             @include shimmer;
@@ -34,6 +45,10 @@
         gap: 1.5rem;
         z-index: 10;
         margin-bottom: 8rem;
+
+        @include respond(tab-port) {
+            margin-bottom: 4rem;
+        }
     }
 
     &-name {
@@ -41,10 +56,6 @@
         width: max-content;
         padding: 1rem 2rem;
         z-index: 10;
-
-        @include respond(tab-land) {
-            width: 80%;
-        }
     }
 
     &-type {
@@ -74,6 +85,10 @@
         width: 60%;
         z-index: 10;
 
+        @include respond(tab-land) {
+            margin-bottom: 3rem;
+        }
+
         &__img {
             width: 100%;
             display: block;
@@ -89,8 +104,13 @@
         left: 41%;
         transform: translate(-61%, -50%);
 
-        @include respond(tab-land) {
-            top: 53%;
+        @include respond(tab-port) {
+            flex-direction: row;
+            top: 0;
+            left: 0;
+            transform: translate(0, 0);
+            margin: -3.5rem 0;
+            position: relative;
         }
 
         &-box {
@@ -100,8 +120,18 @@
             gap: 1rem;
             padding: 1rem;
 
+            @include respond(phone) {
+                gap: 0;
+                padding: 0.5rem;
+            }
+
             &-icon {
                 width: 3rem;
+
+                @include respond(phone) {
+                    width: 2rem;
+                    margin-right: 0.3rem;
+                }
 
                 &__img {
                     width: 100%;
@@ -123,11 +153,22 @@
         z-index: -1;
         width: 60%;
 
+        @include respond(tab-port) {
+            width: 100%;
+            border-top: 1rem solid $color-card-border;
+            border-left: none;
+            padding: 4rem 0 1.5rem 0;
+        }
+
         .move {
             display: flex;
             justify-content: space-around;
             gap: 2rem;
             width: 90%;
+
+            @include respond(tab-port) {
+                width: 95%;
+            }
 
             &:first-child {
                 margin-bottom: 2rem;
@@ -160,6 +201,10 @@
                     align-items: center;
                     &-icon {
                         width: 3rem;
+
+                        @include respond(phone) {
+                            width: 2.5rem;
+                        }
 
                         &__img {
                             width: 100%;

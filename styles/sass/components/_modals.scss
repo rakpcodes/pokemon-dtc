@@ -13,6 +13,10 @@
             left: 50%;
             transform: translate(-50%, -50%);
             width: 35%;
+
+            @include respond(tab-land) {
+                width: 80%;
+            }
         }
 
         &-head {
@@ -70,6 +74,11 @@
             overflow-y: scroll;
             padding: 3rem;
 
+            @include respond(phone) {
+                width: 90%;
+                display: inline-block;
+            }
+
             &-image {
                 display: inline-block;
                 width: 30rem;
@@ -77,16 +86,12 @@
                 margin: 3rem 0;
                 position: relative;
 
-                &:nth-child(2) {
-                    z-index: 100;
-                }
-
                 &__img {
                     display: block;
                     width: 100%;
                     object-fit: cover;
                     position: relative;
-                    z-index: 150;
+                    z-index: 200;
                 }
 
                 .shimmer {
@@ -110,6 +115,10 @@
             justify-content: center;
             gap: 3rem;
 
+            @include respond(phone) {
+                justify-content: space-around;
+            }
+
             &-category {
                 width: 24%;
 
@@ -120,12 +129,13 @@
 
             &-sub-head {
                 @include black-box;
+                padding: 1rem;
                 margin-bottom: 4rem;
             }
 
             &-symbols {
                 @include black-box;
-                padding: 2rem;
+                padding: 2rem 1rem;
                 height: 60vh;
                 overflow-y: scroll;
 
@@ -141,6 +151,14 @@
                         padding: 0.5rem;
                         margin: 0;
                         display: inline-block;
+
+                        @include respond(tab-port) {
+                            width: 8rem;
+                        }
+
+                        @include respond(phone) {
+                            width: 6rem;
+                        }
 
                         &__img {
                             width: 100%;
@@ -160,6 +178,10 @@
                         margin-bottom: 1rem;
                         display: inline-block;
 
+                        @include respond(phone) {
+                            width: 3.5rem;
+                        }
+
                         &__img {
                             width: 100%;
                             object-fit: cover;
@@ -172,6 +194,15 @@
     }
 
     &-credits {
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &-head {
+            width: max-content;
+        }
         &-text-box {
             display: flex;
             flex-direction: column;
@@ -183,6 +214,10 @@
                 border-bottom: 3px solid $color-card-border;
                 transition: all 0.2s;
                 padding: 1rem 0;
+
+                @include respond(phone) {
+                    padding: 0;
+                }
 
                 &:hover,
                 &:focus {

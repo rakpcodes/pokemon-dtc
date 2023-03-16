@@ -22,5 +22,9 @@ body {
         @include respond(tab-land) {
             max-width: 889px;
         }
+
+        @include respond(tab-port) {
+            max-width: 589px;
+        }
     }
 }

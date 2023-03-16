@@ -40,7 +40,6 @@ menuButton.click(function () {
     menuButton.addClass("disappear");
     navModal.removeClass("hide")
     body[0].style.overflow = "hidden"
-    body[0].style.paddingRight = "1.6rem"
 })
 
 btnBackNav.click(function () {
@@ -101,6 +100,8 @@ btnBackAbout.click(function () {
     navModal.removeClass("hide")
 
     $(".ex-bg > .sparkle-canvas").remove()
+    $(".ex-shiny > .sparkle-canvas").remove()
+
 
 })
 
@@ -166,7 +167,6 @@ app.getPkmn = function () {
 app.addCardData = (response) => {
 
     // Add Pokemon Name
-    $(".pkmn-card-name")[0].style.width = "max-content"
     const pkmnName = response.name
     $(".pkmn-card-name").text(pkmnName)
 
@@ -296,8 +296,6 @@ app.addCardData = (response) => {
     }
 
     // Update Stats
-
-    $(".stats")[0].style.top = "50%"
 
     const statsHP = Math.round((response.stats[0].base_stat / 10) * 1.5) * 10
     const statsAttack = Math.round(((response.stats[1].base_stat + response.stats[3].base_stat) / 2) / 10) * 10
