@@ -1040,9 +1040,6 @@ html {
   }
 }
 
-.section-card-display {
-  margin-bottom: 2rem;
-}
 .section-card-display .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
