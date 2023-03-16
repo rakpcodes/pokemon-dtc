@@ -1,4 +1,7 @@
 .section-card-display {
+    @include respond(tab-port) {
+        margin-bottom: 2rem;
+    }
     .wrapper {
         display: flex;
         flex-direction: column;
