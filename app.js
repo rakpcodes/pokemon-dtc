@@ -46,7 +46,6 @@ btnBackNav.click(function () {
     navModal.addClass("hide")
     menuButton.removeClass("disappear")
     body[0].style.overflow = ""
-    body[0].style.paddingRight = ""
 
 })
 
