@@ -200,7 +200,6 @@ app.addCardData = (response) => {
 
     // Check for rarity
     const holoCheck = chance.natural({ min: 1, max: 100 })
-    console.log("Holo Check:", holoCheck)
 
     if (holoCheck <= 24 && holoCheck >= 1) {
         $(".sparkle-canvas").remove()
@@ -238,7 +237,6 @@ app.addCardData = (response) => {
     const shinyCheck = chance.natural({ min: 1, max: 100 })
     const pkmnSprite = $(".pkmn-card-image__img")
     const pkmnSpriteCtnr = $(".pkmn-card-image")
-    console.log("Shiny Check:", shinyCheck)
 
     if (shinyCheck <= 23 && shinyCheck >= 1) {
         const shinyImage = response.sprites.other["official-artwork"].front_shiny
