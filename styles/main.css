@@ -940,6 +940,11 @@ html {
   font-size: 2rem;
   text-transform: uppercase;
 }
+@media (max-width: 56.25em) {
+  .btn-menu, .btn-back {
+    font-size: 1.6rem;
+  }
+}
 
 .modal-nav {
   text-align: center;
@@ -991,7 +996,7 @@ html {
 }
 @media (max-width: 56.25em) {
   .modal-legend-text-box-sub-head {
-    font-size: 1rem;
+    font-size: 1.6rem;
   }
 }
 .modal-legend-text-box-symbols {
@@ -1018,6 +1023,11 @@ html {
 }
 .header-text {
   font-size: 2rem;
+}
+@media (max-width: 37.5em) {
+  .header-text {
+    font-size: 1.6rem;
+  }
 }
 
 .section-card-display {
@@ -1166,6 +1176,11 @@ html {
   margin: 3rem 0;
   position: relative;
 }
+@media (max-width: 26.5em) {
+  .modal-about-text-box-image, .modal-credits-text-box-image {
+    width: 25rem;
+  }
+}
 .modal-about-text-box-image__img, .modal-credits-text-box-image__img {
   display: block;
   width: 100%;
@@ -1215,6 +1230,11 @@ html {
 @media (max-width: 75em) {
   .modal-legend-text-box-category {
     width: 30%;
+  }
+}
+@media (max-width: 75em) {
+  .modal-legend-text-box-category {
+    width: 27%;
   }
 }
 .modal-legend-text-box-sub-head {
@@ -1394,6 +1414,11 @@ html {
     width: 89%;
   }
 }
+@media (max-width: 26.5em) {
+  .pkmn-card {
+    width: 95%;
+  }
+}
 .pkmn-card-top {
   width: 40%;
   display: -webkit-box;
@@ -1541,6 +1566,11 @@ html {
 .pkmn-card .stats-box-icon {
   width: 3rem;
 }
+@media (max-width: 56.25em) {
+  .pkmn-card .stats-box-icon {
+    width: 2.5rem;
+  }
+}
 @media (max-width: 37.5em) {
   .pkmn-card .stats-box-icon {
     width: 2rem;
@@ -1658,18 +1688,23 @@ html {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   position: sticky;
-  top: 5%;
+  top: 3%;
   left: 85%;
   z-index: 90;
 }
 @media (max-width: 56.25em) {
   .btn-menu, .btn-back {
-    left: 80%;
+    left: 83%;
   }
 }
 @media (max-width: 37.5em) {
   .btn-menu, .btn-back {
-    left: 73%;
+    left: 77%;
+  }
+}
+@media (max-width: 26.5em) {
+  .btn-menu, .btn-back {
+    left: 74%;
   }
 }
 .btn-menu:hover, .btn-menu:focus, .btn-back:hover, .btn-back:focus {
@@ -1690,12 +1725,17 @@ html {
 }
 @media (max-width: 56.25em) {
   .btn-back {
-    left: 80%;
+    left: 83%;
   }
 }
 @media (max-width: 37.5em) {
   .btn-back {
-    left: 73%;
+    left: 77%;
+  }
+}
+@media (max-width: 26.5em) {
+  .btn-back {
+    left: 74%;
   }
 }
 .btn-new-card {

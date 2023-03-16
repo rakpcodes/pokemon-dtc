@@ -5,16 +5,20 @@
         padding: 1rem;
         transition: all 0.2s;
         position: sticky;
-        top: 5%;
+        top: 3%;
         left: 85%;
         z-index: 90;
 
         @include respond(tab-port) {
-            left: 80%;
+            left: 83%;
         }
 
         @include respond(phone) {
-            left: 73%;
+            left: 77%;
+        }
+
+        @include respond(phone-small) {
+            left: 74%;
         }
 
         &:hover,
@@ -34,11 +38,15 @@
         left: 85%;
 
         @include respond(tab-port) {
-            left: 80%;
+            left: 83%;
         }
 
         @include respond(phone) {
-            left: 73%;
+            left: 77%;
+        }
+
+        @include respond(phone-small) {
+            left: 74%;
         }
     }
 

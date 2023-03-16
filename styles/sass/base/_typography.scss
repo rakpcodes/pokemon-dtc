@@ -4,6 +4,10 @@
         font-family: $font-family-main;
         font-size: $font-size-header-text;
         text-transform: uppercase;
+
+        @include respond(tab-port) {
+            font-size: 1.6rem;
+        }
     }
 }
 
@@ -66,7 +70,7 @@
                 font-size: $font-size-modal-heading;
 
                 @include respond(tab-port) {
-                    font-size: 1rem;
+                    font-size: 1.6rem;
                 }
             }
 
@@ -98,6 +102,10 @@
 
     &-text {
         font-size: $font-size-header-text;
+
+        @include respond(phone) {
+            font-size: 1.6rem;
+        }
     }
 }
 

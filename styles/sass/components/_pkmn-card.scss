@@ -20,6 +20,10 @@
         width: 89%;
     }
 
+    @include respond(phone-small) {
+        width: 95%;
+    }
+
     &-top {
         width: 40%;
         display: flex;
@@ -127,6 +131,10 @@
 
             &-icon {
                 width: 3rem;
+
+                @include respond(tab-port) {
+                    width: 2.5rem;
+                }
 
                 @include respond(phone) {
                     width: 2rem;
