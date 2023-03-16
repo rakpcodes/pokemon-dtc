@@ -1,6 +1,14 @@
 .header {
+    position: relative;
+    top: -6rem;
+
+    @include respond(tab-port) {
+        top: 0;
+    }
+
     &-main {
         text-shadow: 0 1rem 3px #000;
+        margin: 0 0 2rem 0;
 
         @include respond(tab-port) {
             width: 90%;
@@ -12,7 +20,7 @@
         @include black-box;
         display: inline-block;
         padding: 1rem 2rem;
-        width: 60%;
+        width: 95%;
 
         @include respond(tab-port) {
             width: 90%;

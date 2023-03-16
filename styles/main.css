@@ -260,7 +260,8 @@ body {
   color: #000;
   font-family: "Press Start 2P", cursive;
   line-height: 1.7;
-  background-image: url(../assets/background-main.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5607843137)), to(rgba(0, 0, 0, 0.5607843137))), url(../assets/background-main.jpg);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5607843137), rgba(0, 0, 0, 0.5607843137)), url(../assets/background-main.jpg);
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -282,6 +283,15 @@ body .wrapper {
 @media (max-width: 56.25em) {
   body .wrapper {
     max-width: 589px;
+  }
+}
+body main {
+  position: relative;
+  top: -6rem;
+}
+@media (max-width: 56.25em) {
+  body main {
+    top: 0;
   }
 }
 
@@ -829,6 +839,9 @@ html {
   -webkit-animation: shimmer 4s infinite linear;
           animation: shimmer 4s infinite linear;
 }
+.modal-legend {
+  overflow-y: scroll;
+}
 .modal-legend-head {
   border: 0.5rem solid #000;
   background-color: #fff;
@@ -994,8 +1007,18 @@ html {
   display: none;
 }
 
+.header {
+  position: relative;
+  top: -6rem;
+}
+@media (max-width: 56.25em) {
+  .header {
+    top: 0;
+  }
+}
 .header-main {
   text-shadow: 0 1rem 3px #000;
+  margin: 0 0 2rem 0;
 }
 @media (max-width: 56.25em) {
   .header-main {
@@ -1009,7 +1032,7 @@ html {
   border-radius: 5px;
   display: inline-block;
   padding: 1rem 2rem;
-  width: 60%;
+  width: 95%;
 }
 @media (max-width: 56.25em) {
   .header-text {
@@ -1018,7 +1041,7 @@ html {
 }
 
 .section-card-display {
-  margin-top: 5rem;
+  margin-bottom: 2rem;
 }
 .section-card-display .wrapper {
   display: -webkit-box;
@@ -1385,21 +1408,32 @@ html {
 .btn-new-card {
   all: unset;
   width: 10rem;
-  margin: 4rem 0 3rem 0;
+  margin: 2.5rem 0;
   border-radius: 50%;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+@media (max-width: 56.25em) {
+  .btn-new-card {
+    position: sticky;
+    top: 2rem;
+    z-index: 90;
+  }
 }
 .btn-new-card:hover, .btn-new-card:focus {
-  -webkit-transform: translateY(-0.5rem);
-          transform: translateY(-0.5rem);
+  -webkit-transform: translate(-50%, -0.5rem);
+          transform: translate(-50%, -0.5rem);
   -webkit-box-shadow: 0 1.3rem 1rem #000;
           box-shadow: 0 1.3rem 1rem #000;
   cursor: pointer;
 }
 .btn-new-card:active {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
   -webkit-box-shadow: 0 1rem 1rem #000;
           box-shadow: 0 1rem 1rem #000;
 }

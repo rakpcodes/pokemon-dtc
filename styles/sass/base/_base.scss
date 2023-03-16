@@ -11,7 +11,7 @@ body {
     color: $color-text;
     font-family: $font-family-main;
     line-height: 1.7;
-    background-image: url(../assets/background-main.jpg);
+    background-image: linear-gradient(to bottom, $color-bg-grad, $color-bg-grad), url(../assets/background-main.jpg);
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -30,6 +30,15 @@ body {
 
         @include respond(tab-port) {
             max-width: 589px;
+        }
+    }
+
+    main {
+        position: relative;
+        top: -6rem;
+
+        @include respond(tab-port) {
+            top: 0;
         }
     }
 }

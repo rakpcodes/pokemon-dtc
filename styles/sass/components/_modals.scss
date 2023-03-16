@@ -106,6 +106,7 @@
     }
 
     &-legend {
+        overflow-y: scroll;
         &-head {
             @include black-box;
             position: relative;
