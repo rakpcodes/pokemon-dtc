@@ -1018,7 +1018,7 @@ html {
 }
 .header-main {
   text-shadow: 0 1rem 3px #000;
-  margin: 0 0 2rem 0;
+  margin: 2rem 0;
 }
 @media (max-width: 56.25em) {
   .header-main {
