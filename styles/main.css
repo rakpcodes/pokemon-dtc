@@ -1441,6 +1441,7 @@ html {
           animation: move-in-btm 1s ease-out 0.5s;
   -webkit-animation-fill-mode: backwards;
           animation-fill-mode: backwards;
+  width: 95%;
 }
 @media (max-width: 56.25em) {
   .pkmn-card {
