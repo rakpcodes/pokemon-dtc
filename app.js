@@ -20,6 +20,8 @@
 
 */
 
+// Variables for nav links and modal buttons
+
 const body = $("body")
 const menuButton = $(".btn-menu")
 const navModal = $(".nav")
@@ -36,12 +38,14 @@ const btnBackCredits = $(".btn-back-credits")
 
 
 
+// Main menu button
 menuButton.click(function () {
     menuButton.addClass("disappear");
     navModal.removeClass("hide")
     body[0].style.overflow = "hidden"
 })
 
+// Nav menu back button 
 btnBackNav.click(function () {
     navModal.addClass("hide")
     menuButton.removeClass("disappear")
@@ -49,11 +53,13 @@ btnBackNav.click(function () {
 
 })
 
+// 'About' Modal
 aboutLink.click(function () {
     navModal.addClass("hide");
     aboutModal.removeClass("hide")
 
     // Sparkle Effect for example images
+    // appears when 'about' link on nav is clicked
 
     const exampleBg = $(".ex-bg")
 
@@ -94,6 +100,8 @@ aboutLink.click(function () {
 
 })
 
+// 'About modal back button
+// removes canvas' element created by sparkle effect
 btnBackAbout.click(function () {
     aboutModal.addClass("hide");
     navModal.removeClass("hide")
@@ -104,28 +112,32 @@ btnBackAbout.click(function () {
 
 })
 
+// 'Legend' Modal
 legendLink.click(function () {
     navModal.addClass("hide");
     legendModal.removeClass("hide")
 })
 
+// 'Legend' modal back button 
 btnBackLegend.click(function () {
     legendModal.addClass("hide");
     navModal.removeClass("hide")
 })
 
+// 'Credits' Modal
 creditsLink.click(function () {
     navModal.addClass("hide");
     creditsModal.removeClass("hide")
 })
 
+// 'Credits' Modal back button
 btnBackCredits.click(function () {
     creditsModal.addClass("hide");
     navModal.removeClass("hide")
 })
 
 
-
+// Loop to populate type icons in 'Legend' modal
 const pkmnTypes = ["normal", "fire", "fighting", "water", "flying", "grass", "poison", "electric", "ground", "psychic", "rock", "ice", "bug", "dragon", "ghost", "dark", "steel", "fairy"]
 
 const symbolCtnr = $(".types")
@@ -197,9 +209,10 @@ app.addCardData = (response) => {
     cardBg.removeClass()
 
 
-    // Check for rarity
+    // Check for rarity (holo background)
     const holoCheck = chance.natural({ min: 1, max: 100 })
 
+    // Adds sparkle background if between 1 - 24
     if (holoCheck <= 24 && holoCheck >= 1) {
         $(".sparkle-canvas").remove()
         cardBg.addClass(`pkmn-card-top bg-holo`)
@@ -224,6 +237,7 @@ app.addCardData = (response) => {
             }, 100);
         });
 
+        // Adds regular backround otherwise
     } else {
         $(".sparkle-canvas").remove()
         cardBg.addClass(`pkmn-card-top bg-${pkmnTypeMain}-gradient`);
@@ -231,12 +245,13 @@ app.addCardData = (response) => {
 
     }
 
-    // Change Card Image
+    // Check for rarity (shiny pokemon)
 
     const shinyCheck = chance.natural({ min: 1, max: 100 })
     const pkmnSprite = $(".pkmn-card-image__img")
     const pkmnSpriteCtnr = $(".pkmn-card-image")
 
+    // Adds white sparkles on Pokemon image if between 1 - 23
     if (shinyCheck <= 23 && shinyCheck >= 1) {
         const shinyImage = response.sprites.other["official-artwork"].front_shiny
 
@@ -293,6 +308,7 @@ app.addCardData = (response) => {
     }
 
     // Update Stats
+    // Calculations round base values to nearest 10 
 
     const statsHP = Math.round((response.stats[0].base_stat / 10) * 1.5) * 10
     const statsAttack = Math.round(((response.stats[1].base_stat + response.stats[3].base_stat) / 2) / 10) * 10
@@ -308,6 +324,7 @@ app.addCardData = (response) => {
 
     const moveList = response.moves
 
+    // Check for pokemon with only one move first
     if (moveList.length === 1) {
 
         const onlyMove = moveList[0].move.name
@@ -335,7 +352,6 @@ app.addCardData = (response) => {
                 }
 
                 // Updating first move side panel
-
                 $(".move-side-class-icon__img-primary").attr("src", `./assets/pkmn-vitals-icons/${onlyMoveClass}.png`);
 
                 if (onlyMovePower === null) {
@@ -344,6 +360,7 @@ app.addCardData = (response) => {
                     $(".move-side-power-value-primary").text(`${Math.round(onlyMovePower / 10) * 10}`)
                 }
 
+                // Leave second move as blank
                 $(".move-info__name-secondary").text("---")
                 $(".move-info__type-secondary").text("Type: ---")
                 $(".move-info__desc-secondary").text("---")
@@ -355,11 +372,14 @@ app.addCardData = (response) => {
 
     } else {
 
+        // Chance creates array with 2 random numbers between range
+        // Numbers used as index values for move list
         const chosenMovesIndex = chance.unique(chance.natural, 2, { min: 0, max: (moveList.length) - 1 })
         const move1 = moveList[chosenMovesIndex[0]].move.name
         const move2 = moveList[chosenMovesIndex[1]].move.name
 
-
+        // Second API call to moves endpoint to retrive
+        // move specific data (1st move)
 
         $.ajax({
 
@@ -379,6 +399,8 @@ app.addCardData = (response) => {
 
 
                 // Retreiving the correct description from the array
+                // Loops through all move descriptions from different
+                // game versions
                 for (let i = 0; i < moveDesc1.length; i++) {
                     if (moveDesc1[i].language.name === "en" && moveDesc1[i].version_group.name === "black-white") {
                         $(".move-info__desc-primary").text(`${moveDesc1[i].flavor_text}`)
@@ -398,6 +420,8 @@ app.addCardData = (response) => {
             }
         });
 
+        // Third API call to moves endpoint to retrive
+        // move specific data (2nd move)
         $.ajax({
 
             url: `https://pokeapi.co/api/v2/move/${move2}`,
@@ -410,12 +434,14 @@ app.addCardData = (response) => {
                 const movePower2 = response.power
                 const moveDesc2 = response.flavor_text_entries
 
-                // Updating the first move slot
+                // Updating the second move slot
                 $(".move-info__name-secondary").text(`${moveName2}`)
                 $(".move-info__type-secondary").text(`Type: ${moveType2}`)
 
 
                 // Retreiving the correct description from the array
+                // Loops through all move descriptions from different
+                // game versions
                 for (let i = 0; i < moveDesc2.length; i++) {
                     if (moveDesc2[i].language.name === "en" && moveDesc2[i].version_group.name === "black-white") {
                         $(".move-info__desc-secondary").text(`${moveDesc2[i].flavor_text}`)
