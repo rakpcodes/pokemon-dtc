@@ -147,7 +147,7 @@ pkmnTypes.forEach(type => {
     symbolCtnr.append(`
     <div class="modal-legend-text-box-symbols-type">
         <div class="modal-legend-text-box-symbols-type-icon">
-        <img src="./assets/pkmn-type-icons/${type}.svg" alt="A ${type}-type icon."
+        <img src="./assets/pkmn-icons/pkmn-type-icons/${type}.svg" alt="A ${type}-type icon."
             class="modal-legend-text-box-symbols-type-icon__img bg-${type}">
     </div>
     <p class="modal-legend-text-box-symbols-type-text">${type}</p>
@@ -195,7 +195,7 @@ app.addCardData = (response) => {
         $(".pkmn-card-icon-box").append(`
         <div class="pkmn-card-type">
         <div class="pkmn-card-type-ctnr">
-        <img src="./assets/pkmn-type-icons/${pkmnType}.svg" alt="Pokemon type icon for ${pkmnType}"
+        <img src="./assets/pkmn-icons/pkmn-type-icons/${pkmnType}.svg" alt="Pokemon type icon for ${pkmnType}"
         class="pkmn-card-type-icon bg-${pkmnType}">
         </div>
         </div>
@@ -352,7 +352,7 @@ app.addCardData = (response) => {
                 }
 
                 // Updating first move side panel
-                $(".move-side-class-icon__img-primary").attr("src", `./assets/pkmn-vitals-icons/${onlyMoveClass}.png`);
+                $(".move-side-class-icon__img-primary").attr("src", `./assets/pkmn-icons/pkmn-vitals-icons/${onlyMoveClass}.png`);
 
                 if (onlyMovePower === null) {
                     $(".move-side-power-value-primary").text("---")
@@ -364,7 +364,7 @@ app.addCardData = (response) => {
                 $(".move-info__name-secondary").text("---")
                 $(".move-info__type-secondary").text("Type: ---")
                 $(".move-info__desc-secondary").text("---")
-                $(".move-side-class-icon__img-secondary").attr("src", "./assets/pkmn-vitals-icons/question.png")
+                $(".move-side-class-icon__img-secondary").attr("src", "./assets/pkmn-icons/pkmn-vitals-icons/question.png")
                 $(".move-side-power-value-secondary").text("---")
 
             }
@@ -408,7 +408,7 @@ app.addCardData = (response) => {
                 }
 
                 // Updating Class Icon
-                $(".move-side-class-icon__img-primary").attr("src", `./assets/pkmn-vitals-icons/${moveClass1}.png`);
+                $(".move-side-class-icon__img-primary").attr("src", `./assets/pkmn-icons/pkmn-vitals-icons/${moveClass1}.png`);
 
                 // Updating Power
                 if (movePower1 === null) {
@@ -449,7 +449,7 @@ app.addCardData = (response) => {
                 }
 
                 // Updating Class Icon
-                $(".move-side-class-icon__img-secondary").attr("src", `./assets/pkmn-vitals-icons/${moveClass2}.png`);
+                $(".move-side-class-icon__img-secondary").attr("src", `./assets/pkmn-icons/pkmn-vitals-icons/${moveClass2}.png`);
 
                 // Updating Power
                 if (movePower2 === null) {
